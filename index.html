@@ -1,0 +1,317 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Chevalier Divertissements</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chewy&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main compiled CSS (generated from /style/scss/index.scss) -->
+    <link rel="stylesheet" href="style/css/index.css" />
+    <link rel="stylesheet" href="style/css/style.css" />
+  </head>
+  <body>
+    <!-- ================= HEADER / NAVBAR =================  -->
+    <header class="navbar">
+      <div class="container">
+        <a href="#hero" class="logo"
+          ><img src="images/logo.svg" alt="Logo Chevalier Divertissements"
+        /></a>
+
+        <nav class="menu">
+          <ul>
+            <li><a href="#hero">Accueil</a></li>
+            <li><a href="#about">Qui sommes‑nous ?</a></li>
+            <li><a href="#services">Structures gonflables</a></li>
+            <li><a href="#costumes">Costumes et déguisements</a></li>
+            <li><a href="#decor">Décorations d’intérieur</a></li>
+          </ul>
+        </nav>
+
+        <a href="#devis" class="btn btn--accent cta-nav">Demander un devis</a>
+        <button class="burger" aria-label="Ouvrir le menu mobile">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ================= HERO =================  -->
+    <section class="hero" id="hero">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <img
+            src="images/logo.svg"
+            alt="Logo Chevalier Divertissements"
+            class="hero__logo"
+          />
+          <p>
+            Plongez dans l’univers de la fête et de l’amusement avec Chevalier
+            Divertissements ! Nous vous proposons une large gamme de structures
+            gonflables, déguisements et décorations thématiques pour rendre vos
+            événements inoubliables. Que ce soit pour une fête d’anniversaire,
+            une soirée à thème, ou un événement d’entreprise, nous avons tout ce
+            qu’il vous faut pour créer une ambiance unique et festive.
+          </p>
+          <a href="#services" class="btn btn--primary"
+            >Réservez dès maintenant</a
+          >
+        </div>
+        <div class="hero__image">
+          <img
+            src="images/Kid playing in bounce house full shot.svg"
+            alt="Enfant jouant sur structure gonflable"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TESTIMONIAL =================  -->
+    <section class="testimonial" id="about">
+      <div class="container testimonial__inner">
+        <h2 class="section-title">Ils nous ont fait confiance</h2>
+        <article class="testimonial__card">
+          <img
+            src="images/Shocked man has image of mad hatter spends free time on tea party stares surprised wears professional makeup.svg"
+            alt="Photo client Alice S."
+            class="testimonial__avatar"
+          />
+          <div class="testimonial__content">
+            <h3 class="testimonial__name">Alice S.</h3>
+            <div class="testimonial__rating" aria-label="5 étoiles">★★★★☆</div>
+            <p class="testimonial__text">
+              « Nous avons loué plusieurs structures gonflables et jeux en bois
+              pour l’anniversaire de notre fils, et c’était tout simplement
+              parfait ! Les enfants se sont éclatés toute la journée, et les
+              jeux en bois ont même séduit les adultes. Je recommande vivement
+              leurs services pour tous vos événements festifs ! »
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= SERVICES =================  -->
+    <section class="services" id="services">
+      <div class="container services__inner">
+        <h2 class="section-title">Nos services</h2>
+        <p class="services__intro">
+          Chez Chevalier Divertissements, nous offrons une gamme complète de
+          services pour répondre à tous vos besoins festifs :
+        </p>
+
+        <div class="services__grid">
+          <!-- 1 -->
+          <article class="service-card service-card--pink" id="inflatable">
+            <div class="service-card__content">
+              <h3 class="service-card__title">
+                Location de structures gonflables
+              </h3>
+              <p>
+                De l’atelier gonflable aux parcours d’obstacles, nos structures
+                gonflables sont parfaites pour assurer la sécurité et le grand
+                plaisir des enfants (et des adultes !).
+              </p>
+              <a href="pages/services.html" class="btn btn--dark"
+                >Découvrir nos structures gonflables</a
+              >
+            </div>
+            <img
+              src="images/Kid playing in bounce house full shot.svg"
+              alt="Structure gonflable"
+            />
+          </article>
+
+          <!-- 2 -->
+          <article class="service-card service-card--lilac" id="costumes">
+            <img
+              src="images/Shocked man has image of mad hatter spends free time on tea party stares surprised wears professional makeup.svg"
+              alt="Costume Halloween"
+            />
+            <div class="service-card__content">
+              <h3 class="service-card__title">
+                Location de costumes et déguisements
+              </h3>
+              <p>
+                Transformez‑vous en personnage de conte de fées, en super‑héros,
+                ou en créature fantastique ! Nos costumes vous permettront de
+                laisser libre cours à votre imagination.
+              </p>
+              <a href="pages/services.html#costumes" class="btn btn--dark"
+                >Découvrir les thèmes de nos costumes</a
+              >
+            </div>
+          </article>
+
+          <!-- 3 -->
+          <article class="service-card service-card--blue" id="decor">
+            <div class="service-card__content">
+              <h3 class="service-card__title">
+                Décoration de salles avec thème
+              </h3>
+              <p>
+                Créez une ambiance immersive grâce à nos décorations d’intérieur
+                sur mesure. Qu’il s’agisse d’un thème tropical, médiéval ou
+                fantastique, nous avons tout ce qu’il vous faut pour que votre
+                événement soit un véritable succès.
+              </p>
+              <a href="pages/services.html#decor" class="btn btn--dark"
+                >Découvrir nos réalisations</a
+              >
+            </div>
+            <img
+              src="images/Halloween party decorations on table.svg"
+              alt="Décor"
+            />
+          </article>
+
+          <!-- 4 -->
+          <article class="service-card service-card--green" id="jeux">
+            <img
+              src="images/jeux-peche-tes-contes-le-gruyere-rotated 1.svg"
+              alt="Jeu en bois"
+            />
+            <div class="service-card__content">
+              <h3 class="service-card__title">Location de jeux en bois</h3>
+              <p>
+                Ajoutez une touche d’authenticité et de convivialité à vos
+                événements avec nos jeux en bois traditionnels, idéals pour
+                toutes les générations.
+              </p>
+              <a href="pages/services.html#jeux" class="btn btn--dark"
+                >Découvrir nos jeux en bois</a
+              >
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= REALISATIONS =================  -->
+    <section class="realisations" id="realisations">
+      <div class="container realisations__inner">
+        <h2 class="section-title">Nos réalisations</h2>
+        <p>
+          Découvrez quelques unes de nos réalisations ! Parcourez notre galerie
+          pour voir les structures gonflables, déguisements et décorations
+          thématiques en action.
+        </p>
+
+        <div class="realisations__gallery">
+          <img src="images/realisation1.svg" alt="Réalisation 1" />
+          <img src="images/realisation2.svg" alt="Réalisation 2" />
+          <img src="images/realisation3.svg" alt="Réalisation 3" />
+          <img src="images/realisation4.svg" alt="Réalisation 4" />
+          <img src="images/realisation5.svg" alt="Réalisation 5" />
+          <img src="images/realisation6.svg" alt="Réalisation 6" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DEVIS / CONTACT =================  -->
+    <section class="devis" id="devis">
+      <div class="container devis__inner">
+        <h2 class="section-title">Demande de devis</h2>
+        <p class="devis__intro">
+          Prêt à organiser un événement inoubliable ? Contactez‑nous dès
+          aujourd’hui pour discuter de vos besoins !
+        </p>
+
+        <form class="devis__form" id="quoteForm">
+          <div class="form-group">
+            <label for="name">Nom</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Jean Dupont"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Mail</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="jeandupont@example.fr"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone">Téléphone</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="06 00 00 00 00"
+            />
+          </div>
+          <div class="form-group">
+            <label for="event">Événement</label>
+            <input
+              type="text"
+              id="event"
+              name="event"
+              placeholder="Anniversaire, mariage, soirée…"
+            />
+          </div>
+          <div class="form-group">
+            <label for="subject">Sujet</label>
+            <select id="subject" name="subject">
+              <option value="structures">Structures gonflables</option>
+              <option value="costumes">Costumes / Déguisements</option>
+              <option value="decor">Décoration</option>
+              <option value="other">Autre</option>
+            </select>
+          </div>
+          <div class="form-group form-group--full">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              placeholder="Votre message"
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn--accent">
+            Envoyer votre demande
+          </button>
+        </form>
+
+        <aside class="devis__contact">
+          <ul>
+            <li>
+              <i class="icon icon--map"></i> Rue des Raisons
+              89120 Bengères‑sous‑Montmirail
+            </li>
+            <li><i class="icon icon--phone"></i> 06 86 00 00 05</li>
+            <li><i class="icon icon--mail"></i> chevalier.dragons@gmail.com</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER =================  -->
+    <footer class="site-footer">
+      <div class="container">
+        <p class="footer__brand">chevalier divertissements</p>
+        <p class="footer__copy">
+          Copyright © 2024 Chevalier Divertissements · Mentions légales
+        </p>
+      </div>
+    </footer>
+
+    <!-- Main JS -->
+    <script src="index.js"></script>
+  </body>
+</html>

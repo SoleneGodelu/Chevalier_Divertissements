@@ -1,0 +1,24 @@
+/* Réinitialisation de base  */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Valeur par défaut pour les écrans « moyens » (tablettes en mode portrait) */
+html{ font-size: 62.5%; }   /* 1 rem = 10 px */
+
+/* Petits smartphones : on réduit légèrement */
+@media (max-width: 480px){
+  html{ font-size: 56.25%; } /* 1 rem = 9 px  */
+}
+
+/* Grands laptops et desktops : on agrandit */
+@media (min-width: 1200px){
+  html{ font-size: 68.75%; } /* 1 rem = 11 px */
+}
+
+/* Ultra-wide (≥ 1600 px) : encore un cran */
+@media (min-width: 1600px){
+  html{ font-size: 75%; }    /* 1 rem = 12 px */
+}
