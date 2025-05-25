@@ -1,0 +1,36 @@
+/* style/scss/realisations.scss */
+
+.realisations-page .hero--realisations {
+    padding-block: clamp(3.5rem, 10vw, 6rem);
+    text-align: center;
+    background: var(--clr-primary-50);
+    .hero__title {
+        font-family: "Chewy", cursive;
+        font-size: clamp(2.3rem, 7vw, 3.5rem);
+        margin-bottom: 0.75rem;
+    }
+    .hero__subtitle {
+        max-width: 38rem;
+        margin-inline: auto;
+    }
+}
+
+.gallery__grid {
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    li {
+        overflow: hidden;
+        border-radius: 1rem;
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+            &:hover {
+                transform: scale(1.06);
+            }
+        }
+    }
+}

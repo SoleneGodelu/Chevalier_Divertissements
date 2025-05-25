@@ -1,0 +1,179 @@
+<!-- pages/services.html -->
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Nos services – Chevalier Divertissements</title>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Chewy&family=Poppins:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Feuille SCSS compilée pour cette page + styles généraux -->
+        <link rel="stylesheet" href="../style/css/services.css" />
+        <link rel="stylesheet" href="../style/css/style.css" />
+    </head>
+
+    <body class="services-page">
+        <!-- =============== NAVBAR (identique à la home) =============== -->
+        <header class="navbar">
+            <div class="container">
+                <a href="../index.html#hero" class="logo">
+                    <img
+                        src="../images/logo.svg"
+                        alt="Logo Chevalier Divertissements"
+                    />
+                </a>
+
+                <nav class="menu">
+                    <ul>
+                        <li><a href="../index.html#hero">Accueil</a></li>
+                        <li>
+                            <a href="../index.html#about">Qui sommes-nous ?</a>
+                        </li>
+                        <li><a href="#inflatable">Structures gonflables</a></li>
+                        <li><a href="#costumes">Costumes</a></li>
+                        <li><a href="#decor">Décorations</a></li>
+                        <li><a href="#jeux">Jeux en bois</a></li>
+                    </ul>
+                </nav>
+
+                <a href="devis.html" class="btn btn--accent cta-nav"
+                    >Demander un devis</a
+                >
+                <button class="burger" aria-label="Ouvrir le menu mobile">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- =============== HERO =============== -->
+        <section class="hero hero--services">
+            <div class="container hero__inner">
+                <div class="hero__text">
+                    <h1>Nos services</h1>
+                    <p>
+                        Retrouvez ici le détail complet de toutes nos
+                        prestations : structures gonflables, costumes,
+                        décorations thématiques et jeux traditionnels en bois.
+                        Choisissez la formule idéale pour votre événement !
+                    </p>
+                    <a href="devis.html" class="btn btn--primary"
+                        >Obtenir un devis</a
+                    >
+                </div>
+                <div class="hero__image">
+                    <img
+                        src="../images/Kid playing in bounce house full shot.svg"
+                        alt="Enfant sur structure gonflable"
+                    />
+                </div>
+            </div>
+        </section>
+
+        <!-- =============== SECTIONS DÉTAILLÉES =============== -->
+        <section class="service-detail" id="inflatable">
+            <div class="container">
+                <h2 class="section-title">Structures gonflables</h2>
+                <p>
+                    Plus de 40 modèles disponibles : châteaux, toboggans,
+                    parcours d’obstacles… Tous nos jeux sont contrôlés chaque
+                    année et livrés avec les systèmes de sécurité nécessaires.
+                </p>
+
+                <ul class="detail-list">
+                    <li>Installation et démontage inclus</li>
+                    <li>Surveillance possible par nos animateurs</li>
+                    <li>Tarifs à partir de 120 € la journée</li>
+                </ul>
+
+                <a href="devis.html?subject=structures" class="btn btn--dark"
+                    >Réserver une structure</a
+                >
+            </div>
+        </section>
+
+        <section class="service-detail service-detail--alt" id="costumes">
+            <div class="container">
+                <h2 class="section-title">Costumes et déguisements</h2>
+                <p>
+                    Du 2 ans à la taille 3XL. Thèmes : contes, super-héros,
+                    cinéma, médiéval fantastique… Possibilité de louer la
+                    panoplie complète (costume + accessoires + maquillage).
+                </p>
+
+                <ul class="detail-list">
+                    <li>Pressing inclus dans le prix</li>
+                    <li>Remise en main propre ou expédition sous 48 h</li>
+                    <li>À partir de 25 € le week-end</li>
+                </ul>
+
+                <a href="devis.html?subject=costumes" class="btn btn--dark"
+                    >Voir les thèmes disponibles</a
+                >
+            </div>
+        </section>
+
+        <section class="service-detail" id="decor">
+            <div class="container">
+                <h2 class="section-title">Décorations d’intérieur</h2>
+                <p>
+                    Création d’ambiances immersives : jungle tropicale, château
+                    médiéval, laboratoire futuriste, etc. Nous gérons la
+                    conception, la logistique et la mise en place.
+                </p>
+
+                <ul class="detail-list">
+                    <li>Devis personnalisé en fonction du thème</li>
+                    <li>Éclairage et sonorisation en option</li>
+                    <li>Co-conception avec votre équipe évent (si besoin)</li>
+                </ul>
+
+                <a href="realisations.html" class="btn btn--dark"
+                    >Parcourir nos réalisations</a
+                >
+            </div>
+        </section>
+
+        <section class="service-detail service-detail--alt" id="jeux">
+            <div class="container">
+                <h2 class="section-title">Jeux traditionnels en bois</h2>
+                <p>
+                    Pêche aux canards, billard hollandais, passe-trappe… Des
+                    jeux intemporels appréciés des petits comme des grands et
+                    très faciles à installer.
+                </p>
+
+                <ul class="detail-list">
+                    <li>Normes NF EN 71-1 (sécurité des jouets)</li>
+                    <li>Tarif dégressif dès 3 jeux loués</li>
+                    <li>Transport possible en caisse roulante</li>
+                </ul>
+
+                <a href="devis.html?subject=other" class="btn btn--dark"
+                    >Composer mon pack jeux</a
+                >
+            </div>
+        </section>
+
+        <!-- =============== FOOTER =============== -->
+        <footer class="site-footer">
+            <div class="container">
+                <p class="footer__brand">chevalier divertissements</p>
+                <p class="footer__copy">
+                    Copyright © 2024 Chevalier Divertissements
+                </p>
+            </div>
+        </footer>
+
+        <!-- JS commun -->
+        <script src="../index.js"></script>
+    </body>
+</html>

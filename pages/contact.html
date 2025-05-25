@@ -1,0 +1,92 @@
+<!-- pages/contact.html -->
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Contact – Chevalier Divertissements</title>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Chewy&family=Poppins:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="../style/css/contact.css" />
+        <link rel="stylesheet" href="../style/css/style.css" />
+    </head>
+
+    <body class="contact-page">
+        <!-- NAVBAR -->
+        <header class="navbar">
+            <div class="container">
+                <a href="../index.html#hero" class="logo">
+                    <img
+                        src="../images/logo.svg"
+                        alt="Logo Chevalier Divertissements"
+                    />
+                </a>
+
+                <nav class="menu">
+                    <ul>
+                        <li><a href="../index.html#hero">Accueil</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="realisations.html">Réalisations</a></li>
+                        <li><a href="devis.html">Devis</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- COORDONNÉES -->
+        <section class="contact-info">
+            <div class="container">
+                <h1 class="section-title">Nous contacter</h1>
+
+                <address class="contact-info__grid">
+                    <div class="contact-info__item">
+                        <i class="icon icon--map"></i>
+                        <span
+                            >Rue des Raisons<br />89120
+                            Bengères-sous-Montmirail</span
+                        >
+                    </div>
+
+                    <div class="contact-info__item">
+                        <i class="icon icon--phone"></i>
+                        <a href="tel:+33686000005">06 86 00 00 05</a>
+                    </div>
+
+                    <div class="contact-info__item">
+                        <i class="icon icon--mail"></i>
+                        <a href="mailto:chevalier.dragons@gmail.com"
+                            >chevalier.dragons@gmail.com</a
+                        >
+                    </div>
+                </address>
+
+                <div class="map-embed">
+                    <!-- Carte statique (iframe OpenStreetMap) -->
+                    <iframe
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=3.3%2C47.5%2C3.35%2C47.52&amp;layer=mapnik&amp;marker=47.51%2C3.32"
+                        style="border: 0"
+                        loading="lazy"
+                    ></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="site-footer">
+            <div class="container">
+                <p class="footer__brand">chevalier divertissements</p>
+            </div>
+        </footer>
+
+        <script src="../index.js"></script>
+    </body>
+</html>

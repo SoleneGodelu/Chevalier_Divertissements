@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/* style/scss/services.scss */
+/* Réinitialisation de base  */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Valeur par défaut pour les écrans « moyens » (tablettes en mode portrait) */
+html {
+  font-size: 62.5%;
+} /* 1 rem = 10 px */
+/* Petits smartphones : on réduit légèrement */
+@media (max-width: 480px) {
+  html {
+    font-size: 56.25%;
+  } /* 1 rem = 9 px  */
+}
+/* Grands laptops et desktops : on agrandit */
+@media (min-width: 1200px) {
+  html {
+    font-size: 68.75%;
+  } /* 1 rem = 11 px */
+}
+/* Ultra-wide (≥ 1600 px) : encore un cran */
+@media (min-width: 1600px) {
+  html {
+    font-size: 75%;
+  } /* 1 rem = 12 px */
+}
+.services-page {
+  /* — HERO ---------------------------------------------------- */
+  /* — SECTIONS DÉTAILLÉES ------------------------------------ */
+}
+.services-page .hero--services {
+  padding-block: var(--space-section);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3)), url("../../images/Kid playing in bounce house full shot.svg") center/cover no-repeat;
+}
+.services-page .hero--services .hero__text {
+  max-width: 32rem;
+}
+.services-page .service-detail {
+  padding-block: var(--space-section);
+}
+.services-page .service-detail--alt {
+  background: var(--clr-primary-50);
+}
+.services-page .service-detail .section-title {
+  margin-bottom: 0.75rem;
+}
+.services-page .service-detail .detail-list {
+  margin: 1.25rem 0 2rem;
+  padding-left: 1.25rem;
+  list-style: "✓ ";
+}
+.services-page .service-detail .detail-list li {
+  margin-bottom: 0.35rem;
+}/*# sourceMappingURL=services.css.map */

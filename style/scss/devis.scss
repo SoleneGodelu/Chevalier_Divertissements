@@ -1,0 +1,26 @@
+/* style/scss/devis.scss */
+
+.devis-form-section {
+    padding-block: clamp(4rem, 10vw, 6rem);
+
+    .section-title {
+        font-family: "Chewy", cursive;
+        font-size: clamp(2rem, 6vw, 2.8rem);
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        margin-bottom: 2rem;
+        max-width: 40rem;
+    }
+
+    .devis__form {
+        max-width: 42rem;
+        margin-inline: auto;
+    }
+}
+
+.navbar--plain {
+    padding-block: 0.75rem;
+    background: var(--clr-primary-100, #faf6ff);
+}
