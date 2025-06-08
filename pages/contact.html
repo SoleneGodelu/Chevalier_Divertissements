@@ -1,92 +1,393 @@
-<!-- pages/contact.html -->
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>Contact – Chevalier Divertissements</title>
+    <title>Contact - Chevalier Divertissements</title>
 
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Chewy&family=Poppins:wght@300;400;500;600;700&display=swap"
-            rel="stylesheet"
-        />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chewy&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-        <link rel="stylesheet" href="../style/css/contact.css" />
-        <link rel="stylesheet" href="../style/css/style.css" />
-    </head>
+    <!-- Main compiled CSS -->
+    <link rel="stylesheet" href="../style/css/style.css" />
+    <link rel="stylesheet" href="../style/css/index.css" />
+    <link rel="stylesheet" href="../style/css/contact.css" />
+  </head>
+  <body>
+    <!-- ================= HEADER / NAVBAR =================  -->
+    <header class="navbar">
+      <div class="container">
+        <a href="../index.html#hero" class="logo"
+          ><img src="../images/logo.svg" alt="Logo Chevalier Divertissements"
+        /></a>
 
-    <body class="contact-page">
-        <!-- NAVBAR -->
-        <header class="navbar">
-            <div class="container">
-                <a href="../index.html#hero" class="logo">
-                    <img
-                        src="../images/logo.svg"
-                        alt="Logo Chevalier Divertissements"
-                    />
+        <nav class="menu">
+          <ul>
+            <li><a href="../index.html#hero">Accueil</a></li>
+            <li><a href="../index.html#about">Qui sommes‑nous ?</a></li>
+            <li><a href="../index.html#services">Structures gonflables</a></li>
+            <li>
+              <a href="../index.html#costumes">Costumes et déguisements</a>
+            </li>
+            <li><a href="../index.html#decor">Décorations d'intérieur</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+          </ul>
+        </nav>
+
+        <a href="#contact-form" class="btn btn--accent cta-nav"
+          >Nous contacter</a
+        >
+        <button class="burger" aria-label="Ouvrir le menu mobile">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ================= HERO CONTACT ================= -->
+    <section class="contact-hero">
+      <div class="container contact-hero__inner">
+        <div class="contact-hero__content">
+          <h1 class="section-title">Contactez-nous</h1>
+          <p class="contact-hero__subtitle">
+            Une question ? Un projet ? N'hésitez pas à nous contacter ! Nous
+            sommes là pour vous accompagner dans l'organisation de vos
+            événements les plus mémorables.
+          </p>
+        </div>
+        <div class="contact-hero__image">
+          <img
+            src="../images/Logo complet.svg"
+            alt="Logo Chevalier Divertissements"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT INFO ================= -->
+    <section class="contact-info">
+      <div class="container">
+        <h2 class="section-title">Comment nous joindre</h2>
+        <div class="contact-info__grid">
+          <div class="contact-card contact-card--primary">
+            <div class="contact-card__icon">
+              <img src="../images/icon_location.svg" alt="Adresse" />
+            </div>
+            <div class="contact-card__content">
+              <h3>Notre adresse</h3>
+              <p>
+                Rue des Raisons<br />
+                89120 Bengères‑sous‑Montmirail
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-card contact-card--accent">
+            <div class="contact-card__icon">
+              <img src="../images/icon_phone.svg" alt="Téléphone" />
+            </div>
+            <div class="contact-card__content">
+              <h3>Téléphone</h3>
+              <p>
+                <a href="tel:0686000005">06 86 00 00 05</a>
+              </p>
+              <small>Du lundi au samedi<br />9h - 18h</small>
+            </div>
+          </div>
+
+          <div class="contact-card contact-card--blue">
+            <div class="contact-card__icon">
+              <img src="../images/icon_mail.svg" alt="Email" />
+            </div>
+            <div class="contact-card__content">
+              <h3>Email</h3>
+              <p>
+                <a href="mailto:chevalier.dragons@gmail.com">
+                  chevalier.dragons@gmail.com
                 </a>
-
-                <nav class="menu">
-                    <ul>
-                        <li><a href="../index.html#hero">Accueil</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="realisations.html">Réalisations</a></li>
-                        <li><a href="devis.html">Devis</a></li>
-                    </ul>
-                </nav>
+              </p>
+              <small>Réponse sous 24h</small>
             </div>
-        </header>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!-- COORDONNÉES -->
-        <section class="contact-info">
-            <div class="container">
-                <h1 class="section-title">Nous contacter</h1>
+    <!-- ================= CONTACT FORM ================= -->
+    <section class="contact-form-section" id="contact-form">
+      <div class="container">
+        <div class="contact-form-wrapper">
+          <div class="contact-form__content">
+            <h2 class="section-title">Envoyez-nous un message</h2>
+            <p>
+              Remplissez le formulaire ci-dessous et nous vous répondrons dans
+              les plus brefs délais pour discuter de votre project.
+            </p>
 
-                <address class="contact-info__grid">
-                    <div class="contact-info__item">
-                        <i class="icon icon--map"></i>
-                        <span
-                            >Rue des Raisons<br />89120
-                            Bengères-sous-Montmirail</span
-                        >
-                    </div>
-
-                    <div class="contact-info__item">
-                        <i class="icon icon--phone"></i>
-                        <a href="tel:+33686000005">06 86 00 00 05</a>
-                    </div>
-
-                    <div class="contact-info__item">
-                        <i class="icon icon--mail"></i>
-                        <a href="mailto:chevalier.dragons@gmail.com"
-                            >chevalier.dragons@gmail.com</a
-                        >
-                    </div>
-                </address>
-
-                <div class="map-embed">
-                    <!-- Carte statique (iframe OpenStreetMap) -->
-                    <iframe
-                        src="https://www.openstreetmap.org/export/embed.html?bbox=3.3%2C47.5%2C3.35%2C47.52&amp;layer=mapnik&amp;marker=47.51%2C3.32"
-                        style="border: 0"
-                        loading="lazy"
-                    ></iframe>
+            <form class="contact-form" id="contactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">Prénom *</label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    placeholder="Jean"
+                    required
+                  />
                 </div>
-            </div>
-        </section>
+                <div class="form-group">
+                  <label for="lastName">Nom *</label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    placeholder="Dupont"
+                    required
+                  />
+                </div>
+              </div>
 
-        <!-- FOOTER -->
-        <footer class="site-footer">
-            <div class="container">
-                <p class="footer__brand">chevalier divertissements</p>
-            </div>
-        </footer>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email *</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="jean.dupont@example.fr"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Téléphone</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="06 00 00 00 00"
+                  />
+                </div>
+              </div>
 
-        <script src="../index.js"></script>
-    </body>
+              <div class="form-group">
+                <label for="eventType">Type d'événement</label>
+                <select id="eventType" name="eventType">
+                  <option value="">Sélectionnez un type</option>
+                  <option value="anniversaire">Anniversaire</option>
+                  <option value="mariage">Mariage</option>
+                  <option value="entreprise">Événement d'entreprise</option>
+                  <option value="fete-village">Fête de village</option>
+                  <option value="autre">Autre</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="services">Services souhaités</label>
+                <div class="checkbox-group">
+                  <label class="checkbox-label">
+                    <input
+                      type="checkbox"
+                      name="services[]"
+                      value="structures"
+                    />
+                    <span class="checkmark"></span>
+                    Structures gonflables
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="services[]" value="costumes" />
+                    <span class="checkmark"></span>
+                    Costumes et déguisements
+                  </label>
+                  <label class="checkbox-label">
+                    <input
+                      type="checkbox"
+                      name="services[]"
+                      value="decoration"
+                    />
+                    <span class="checkmark"></span>
+                    Décoration thématique
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="services[]" value="jeux" />
+                    <span class="checkmark"></span>
+                    Jeux en bois
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="eventDate">Date souhaitée</label>
+                  <input type="date" id="eventDate" name="eventDate" />
+                </div>
+                <div class="form-group">
+                  <label for="guests">Nombre d'invités</label>
+                  <input
+                    type="number"
+                    id="guests"
+                    name="guests"
+                    placeholder="Ex: 20"
+                    min="1"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Votre message *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Décrivez-nous votre projet, vos besoins spécifiques, le lieu de l'événement..."
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form-group">
+                <label class="checkbox-label privacy-checkbox">
+                  <input type="checkbox" name="privacy" required />
+                  <span class="checkmark"></span>
+                  J'accepte que mes données soient utilisées pour me recontacter
+                  concernant ma demande *
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn--accent btn--large">
+                Envoyer votre message
+              </button>
+            </form>
+          </div>
+
+          <div class="contact-form__aside">
+            <div class="contact-tips">
+              <h3>Conseils pour votre demande</h3>
+              <ul>
+                <li>
+                  <strong>Anticipez :</strong> Contactez-nous au moins 2
+                  semaines avant votre événement
+                </li>
+                <li>
+                  <strong>Soyez précis :</strong> Indiquez le lieu, le nombre
+                  d'invités et vos souhaits spécifiques
+                </li>
+                <li>
+                  <strong>Budget :</strong> N'hésitez pas à mentionner votre
+                  budget pour une proposition adaptée
+                </li>
+                <li>
+                  <strong>Flexibilité :</strong> Plusieurs dates possibles
+                  augmentent vos chances de disponibilité
+                </li>
+              </ul>
+            </div>
+
+            <div class="contact-availability">
+              <h3>Nos disponibilités</h3>
+              <div class="availability-item">
+                <strong>Lundi - Vendredi</strong>
+                <span>9h00 - 18h00</span>
+              </div>
+              <div class="availability-item">
+                <strong>Samedi</strong>
+                <span>9h00 - 17h00</span>
+              </div>
+              <div class="availability-item">
+                <strong>Dimanche</strong>
+                <span>Sur rendez-vous</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="faq">
+      <div class="container">
+        <h2 class="section-title">Questions fréquentes</h2>
+        <div class="faq__grid">
+          <div class="faq-item">
+            <h3>Combien de temps à l'avance dois-je réserver ?</h3>
+            <p>
+              Nous recommandons de réserver au moins 2 semaines avant votre
+              événement, surtout pour les weekends et périodes de fêtes.
+              Cependant, n'hésitez pas à nous contacter même pour des demandes
+              de dernière minute !
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Livrez-vous et installez-vous le matériel ?</h3>
+            <p>
+              Oui ! Nous nous occupons de la livraison, de l'installation et de
+              la récupération de tout le matériel. Le coût de livraison dépend
+              de la distance depuis notre base à Bengères-sous-Montmirail.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Que se passe-t-il en cas de mauvais temps ?</h3>
+            <p>
+              Pour les structures gonflables, nous évaluons les conditions météo
+              le jour J. En cas de vents forts ou d'orage, nous pouvons reporter
+              l'installation par sécurité. Les costumes et décorations ne sont
+              pas affectés par la météo.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Proposez-vous des tarifs de groupe ?</h3>
+            <p>
+              Oui, nous proposons des tarifs préférentiels pour les locations
+              multiples ou les événements importants. N'hésitez pas à nous faire
+              part de vos besoins pour obtenir un devis personnalisé.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA SECTION ================= -->
+    <section class="cta-contact">
+      <div class="container">
+        <div class="cta-contact__content">
+          <h2>Prêt à créer un événement inoubliable ?</h2>
+          <p>
+            Contactez-nous dès maintenant pour discuter de votre projet et
+            obtenir votre devis personnalisé !
+          </p>
+          <div class="cta-contact__buttons">
+            <a href="tel:0686000005" class="btn btn--primary">
+              Appelez-nous maintenant
+            </a>
+            <a href="../index.html#services" class="btn btn--accent">
+              Voir nos services
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+      <div class="container">
+        <p class="footer__brand">chevalier divertissements</p>
+        <p class="footer__copy">
+          Copyright © 2024 Chevalier Divertissements ·
+          <a href="../index.html">Accueil</a> ·
+          <a href="contact.html">Contact</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Main JS -->
+    <script src="../js/contact.js"></script>
+  </body>
 </html>

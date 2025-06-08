@@ -1,0 +1,646 @@
+/* style/scss/costumes.scss */
+
+/* ================= VARIABLES ================= */
+$primary-color: #005c83;
+$accent-color: #f5c400;
+$text-dark: #21221e;
+$text-light: #ffffff;
+$bg-light: #ffffff;
+$bg-grey: #f5f5f5;
+
+$service-pink: #ffd9e3;
+$service-lilac: #e9d9ff;
+$service-blue: #d4f1ff;
+$service-green: #d4ffe1;
+
+$font-body: "Poppins", sans-serif;
+$font-display: "Chewy", cursive;
+
+/* ================= GLOBAL STYLES ================= */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: $font-body;
+    color: $text-dark;
+    background-color: $bg-light;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: min(90%, 1100px);
+    margin-inline: auto;
+}
+
+.section-title {
+    font-family: $font-display;
+    font-weight: 100;
+    font-size: clamp(1.8rem, 6vw, 4rem);
+    text-align: center;
+    margin: 0 0 1.5rem;
+    color: $primary-color;
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.25s ease, color 0.25s ease;
+    border: none;
+    cursor: pointer;
+    font-family: $font-body;
+
+    &--primary {
+        background: $primary-color;
+        color: $text-light;
+        &:hover {
+            background: darken($primary-color, 8%);
+        }
+    }
+
+    &--accent {
+        background: $accent-color;
+        color: $text-dark;
+        &:hover {
+            background: darken($accent-color, 8%);
+        }
+    }
+
+    &--dark {
+        background: $text-dark;
+        color: $text-light;
+        &:hover {
+            background: lighten($text-dark, 15%);
+        }
+    }
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    inset-inline: 0;
+    background: $primary-color;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba($primary-color, 0.25);
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        padding-block: 0.75rem;
+    }
+
+    .logo {
+        img {
+            height: 48px;
+            width: auto;
+        }
+    }
+
+    .menu {
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 0;
+
+            li a {
+                color: $text-light;
+                text-decoration: none;
+                font-weight: 500;
+                transition: opacity 0.25s ease;
+                &:hover,
+                &:focus {
+                    opacity: 0.75;
+                }
+            }
+        }
+    }
+
+    .cta-nav {
+        margin-left: auto;
+    }
+
+    .burger {
+        display: none;
+        flex-direction: column;
+        gap: 4px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+
+        span {
+            width: 24px;
+            height: 3px;
+            background: $text-light;
+        }
+    }
+
+    @media (max-width: 900px) {
+        .menu {
+            position: fixed;
+            inset: 0 0 0 auto;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            background: $primary-color;
+            padding: min(20vh, 6rem) 2rem;
+            width: 300px;
+
+            ul {
+                flex-direction: column;
+                gap: 1.25rem;
+                li a {
+                    font-size: 1.25rem;
+                }
+            }
+        }
+
+        .menu.open {
+            transform: translateX(0);
+        }
+
+        .burger {
+            display: flex;
+        }
+
+        .cta-nav {
+            display: none;
+        }
+    }
+}
+
+/* ================= HERO SECTION ================= */
+.hero {
+    padding: 12rem 0 6rem;
+    background: linear-gradient(135deg, $service-lilac 0%, $service-pink 100%);
+
+    &__content {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        color: $primary-color;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+        color: $text-dark;
+    }
+
+    @media (max-width: 768px) {
+        padding: 10rem 0 4rem;
+    }
+}
+
+/* ================= CATEGORIES SECTION ================= */
+.categories {
+    padding: 4rem 0;
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+}
+
+.category-card {
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+
+        .category-card__image img {
+            transform: scale(1.05);
+        }
+    }
+
+    &__image {
+        height: 250px;
+        overflow: hidden;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+    }
+
+    &__content {
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin: 0 0 0.5rem;
+        color: $primary-color;
+    }
+
+    &__description {
+        color: #666;
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* ================= PRICING SECTION ================= */
+.pricing {
+    background: $bg-grey;
+    padding: 4rem 0;
+
+    &__content {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+.pricing-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    &__title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: $primary-color;
+        margin-bottom: 1rem;
+    }
+
+    &__price {
+        font-size: 2rem;
+        font-weight: 700;
+        color: $accent-color;
+        margin-bottom: 0.5rem;
+    }
+
+    &__period {
+        color: #666;
+        margin-bottom: 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    &__features {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 2rem;
+
+        li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            font-size: 0.9rem;
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+/* ================= CONTACT CTA SECTION ================= */
+.contact-cta {
+    background: $primary-color;
+    color: $text-light;
+    padding: 4rem 0;
+    text-align: center;
+
+    h2 {
+        color: $text-light;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* ================= FEATURES SECTION (optionnel) ================= */
+.features {
+    padding: 4rem 0;
+    background: $service-blue;
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    &__item {
+        text-align: center;
+        padding: 1.5rem;
+
+        &__icon {
+            width: 60px;
+            height: 60px;
+            background: $accent-color;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+        }
+
+        &__title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: $primary-color;
+        }
+
+        &__description {
+            font-size: 0.9rem;
+            color: #666;
+        }
+    }
+}
+
+/* ================= GALLERY SECTION (optionnel) ================= */
+.gallery {
+    padding: 4rem 0;
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    &__item {
+        aspect-ratio: 1;
+        overflow: hidden;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+/* ================= TESTIMONIALS SECTION ================= */
+.testimonials {
+    background: rgba($primary-color, 0.05);
+    padding: 4rem 0;
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    &__card {
+        background: white;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        text-align: center;
+
+        &__avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            object-fit: cover;
+            border: 3px solid $accent-color;
+        }
+
+        &__name {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: $primary-color;
+        }
+
+        &__rating {
+            color: $accent-color;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        &__text {
+            font-style: italic;
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+    }
+}
+
+/* ================= FOOTER ================= */
+.site-footer {
+    background: $primary-color;
+    color: $text-light;
+    text-align: center;
+    padding: 2rem 0;
+
+    .footer__brand {
+        font-family: $font-display;
+        font-size: 1.5rem;
+        margin: 0 0 0.25rem;
+        letter-spacing: 1px;
+    }
+
+    .footer__copy {
+        font-size: 0.875rem;
+        margin: 0;
+        opacity: 0.8;
+    }
+}
+
+/* ================= UTILITY CLASSES ================= */
+.text-center {
+    text-align: center;
+}
+
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+.mb-3 { margin-bottom: 3rem; }
+
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mt-3 { margin-top: 3rem; }
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+
+    &.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 53%, 80%, 100% {
+        transform: translate3d(0,0,0);
+    }
+    40%, 43% {
+        transform: translate3d(0, -10px, 0);
+    }
+    70% {
+        transform: translate3d(0, -5px, 0);
+    }
+}
+
+.animate-fadeInUp {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.animate-bounce {
+    animation: bounce 2s infinite;
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+@media (max-width: 1200px) {
+    .container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 8rem 0 3rem;
+        
+        &__content {
+            padding: 0 1rem;
+        }
+        
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    .categories,
+    .pricing,
+    .contact-cta {
+        padding: 3rem 0;
+    }
+
+    .category-card {
+        &__image {
+            height: 200px;
+        }
+        
+        &__content {
+            padding: 1rem;
+        }
+    }
+
+    .pricing-card {
+        padding: 1.5rem;
+        
+        &__price {
+            font-size: 1.5rem;
+        }
+    }
+
+    .section-title {
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 7rem 0 2rem;
+    }
+
+    .categories__grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .category-card__content {
+        padding: 1rem;
+    }
+
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* ================= DARK MODE SUPPORT (optionnel) ================= */
+@media (prefers-color-scheme: dark) {
+    // Variables pour le mode sombre pourraient être ajoutées ici
+    // si nécessaire pour une future implémentation
+}
