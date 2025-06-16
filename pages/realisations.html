@@ -1,408 +1,448 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Nos Réalisations - Chevalier Divertissements</title>
+        <title>Nos Réalisations - Chevalier Divertissements</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Chewy&family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Chewy&family=Poppins:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="../style/css/style.css" />
-    <link rel="stylesheet" href="../style/css/index.css" />
-    <link rel="stylesheet" href="../style/css/realisations.css" />
-  </head>
-  <body>
-    <!-- ================= HEADER / NAVBAR ================= -->
-    <header class="navbar">
-      <div class="container">
-        <a href="../index.html#hero" class="logo">
-          <img src="../images/logo.svg" alt="Logo Chevalier Divertissements" />
-        </a>
+        <!-- CSS -->
+        <link rel="stylesheet" href="../style/css/style.css" />
+        <link rel="stylesheet" href="../style/css/index.css" />
+        <link rel="stylesheet" href="../style/css/realisations.css" />
+    </head>
+    <body>
+        <!-- ================= HEADER / NAVBAR ================= -->
+        <header class="navbar">
+            <div class="container">
+                <a href="../index.html#hero" class="logo">
+                    <img
+                        src="../images/logo.svg"
+                        alt="Logo Chevalier Divertissements"
+                    />
+                </a>
 
-        <nav class="menu">
-          <ul>
-            <li><a href="../index.html">Accueil</a></li>
-            <li><a href="./realisations.html">Réalisation</a></li>
-            <li><a href="./costumes.html">Costumes et déguisements</a></li>
-            <li>
-              <a href="./jeux.html">Structures gonflables & Jeux en bois</a>
-            </li>
-          </ul>
-        </nav>
+                <nav class="menu">
+                    <ul>
+                        <li>
+                            <a href="../pages/realisations.html"
+                                >Réalisations</a
+                            >
+                        </li>
+                        <li>
+                            <a href="../pages/costumes.html"
+                                >Costumes & déguisements</a
+                            >
+                        </li>
+                        <li>
+                            <a href="../pages/jeux.html"
+                                >Structures gonflables & jeux en bois</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
 
-        <a href="contact.html" class="btn btn--accent cta-nav"
-          >Nous contacter</a
-        >
-        <button class="burger" aria-label="Ouvrir le menu mobile">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </header>
-
-    <!-- ================= HERO RÉALISATIONS ================= -->
-    <section class="hero-realisations">
-      <div class="container hero-realisations__inner">
-        <div class="hero-realisations__content">
-          <h1 class="section-title">Nos Plus Belles Réalisations</h1>
-          <p class="hero-realisations__subtitle">
-            Découvrez quelques-uns de nos événements les plus mémorables !
-            Chaque fête est unique et nous mettons tout en œuvre pour créer des
-            moments magiques et inoubliables.
-          </p>
-        </div>
-        <div class="hero-realisations__stats">
-          <div class="stat-item">
-            <span class="stat-number">500+</span>
-            <span class="stat-label">Événements organisés</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">15</span>
-            <span class="stat-label">Ans d'expérience</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">100%</span>
-            <span class="stat-label">Clients satisfaits</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= GALERIE PRINCIPALE ================= -->
-    <section class="main-gallery">
-      <div class="container">
-        <h2 class="section-title">Galerie Photos</h2>
-        <p class="gallery-intro">
-          Plongez dans l'univers magique de nos événements à travers cette
-          sélection de photos qui témoignent de la joie et du bonheur partagés.
-        </p>
-
-        <div class="gallery-filter">
-          <button class="filter-btn active" data-filter="all">Tout voir</button>
-          <button class="filter-btn" data-filter="anniversaires">
-            Anniversaires
-          </button>
-          <button class="filter-btn" data-filter="mariages">Mariages</button>
-          <button class="filter-btn" data-filter="ecoles">Écoles</button>
-          <button class="filter-btn" data-filter="entreprises">
-            Entreprises
-          </button>
-        </div>
-
-        <div class="gallery-grid" id="galleryGrid">
-          <!-- Anniversaires -->
-          <div class="gallery-item" data-category="anniversaires">
-            <img
-              src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=500&h=400&fit=crop"
-              alt="Anniversaire enfant avec château gonflable"
-            />
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h4>Anniversaire Princesse</h4>
-                <p>Emma, 6 ans - Château gonflable rose</p>
-                <span class="event-type">Anniversaire</span>
-              </div>
+                <a href="contact.html" class="btn btn--accent cta-nav"
+                    >Nous contacter</a
+                >
+                <button class="burger" aria-label="Ouvrir le menu mobile">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
-          </div>
+        </header>
 
-          <div class="gallery-item" data-category="anniversaires">
-            <img
-              src="https://images.unsplash.com/photo-1464207687429-7505649dae38?w=500&h=400&fit=crop"
-              alt="Enfants qui s'amusent sur structure gonflable"
-            />
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h4>Super-Héros Party</h4>
-                <p>Lucas, 8 ans - Parcours d'obstacles</p>
-                <span class="event-type">Anniversaire</span>
-              </div>
+        <!-- ================= HERO RÉALISATIONS ================= -->
+        <section class="hero-realisations">
+            <div class="container hero-realisations__inner">
+                <div class="hero-realisations__content">
+                    <h1 class="section-title">Nos Plus Belles Réalisations</h1>
+                    <p class="hero-realisations__subtitle">
+                        Découvrez quelques-uns de nos événements les plus
+                        mémorables ! Chaque fête est unique et nous mettons tout
+                        en œuvre pour créer des moments magiques et
+                        inoubliables.
+                    </p>
+                </div>
+                <div class="hero-realisations__stats">
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Événements organisés</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15</span>
+                        <span class="stat-label">Ans d'expérience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Clients satisfaits</span>
+                    </div>
+                </div>
             </div>
-          </div>
+        </section>
 
-          <div class="gallery-item" data-category="anniversaires">
-            <img
-              src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=500&h=400&fit=crop"
-              alt="Fête d'anniversaire colorée"
-            />
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h4>Fête Arc-en-Ciel</h4>
-                <p>Léa, 7 ans - Toboggan géant multicolore</p>
-                <span class="event-type">Anniversaire</span>
-              </div>
+        <!-- ================= GALERIE PRINCIPALE ================= -->
+        <section class="main-gallery">
+            <div class="container">
+                <h2 class="section-title">Galerie Photos</h2>
+                <p class="gallery-intro">
+                    Plongez dans l'univers magique de nos événements à travers
+                    cette sélection de photos qui témoignent de la joie et du
+                    bonheur partagés.
+                </p>
+
+                <div class="gallery-filter">
+                    <button class="filter-btn active" data-filter="all">
+                        Tout voir
+                    </button>
+                    <button class="filter-btn" data-filter="anniversaires">
+                        Anniversaires
+                    </button>
+                    <button class="filter-btn" data-filter="mariages">
+                        Mariages
+                    </button>
+                    <button class="filter-btn" data-filter="ecoles">
+                        Écoles
+                    </button>
+                    <button class="filter-btn" data-filter="entreprises">
+                        Entreprises
+                    </button>
+                </div>
+
+                <div class="gallery-grid" id="galleryGrid">
+                    <!-- Anniversaires -->
+                    <div class="gallery-item" data-category="anniversaires">
+                        <img
+                            src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=500&h=400&fit=crop"
+                            alt="Anniversaire enfant avec château gonflable"
+                        />
+                        <!-- <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Anniversaire Princesse</h4>
+                                <p>Emma, 6 ans - Château gonflable rose</p>
+                                <span class="event-type">Anniversaire</span>
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <div class="gallery-item" data-category="anniversaires">
+                        <img
+                            src="https://images.unsplash.com/photo-1464207687429-7505649dae38?w=500&h=400&fit=crop"
+                            alt="Enfants qui s'amusent sur structure gonflable"
+                        />
+                        <!-- <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Super-Héros Party</h4>
+                                <p>Lucas, 8 ans - Parcours d'obstacles</p>
+                                <span class="event-type">Anniversaire</span>
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <div class="gallery-item" data-category="anniversaires">
+                        <img
+                            src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=500&h=400&fit=crop"
+                            alt="Fête d'anniversaire colorée"
+                        />
+                        <!-- <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Fête Arc-en-Ciel</h4>
+                                <p>Léa, 7 ans - Toboggan géant multicolore</p>
+                                <span class="event-type">Anniversaire</span>
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <!-- Mariages -->
+                    <div class="gallery-item" data-category="mariages">
+                        <img
+                            src="https://images.unsplash.com/photo-1519741497674-611481863552?w=500&h=400&fit=crop"
+                            alt="Mariage élégant avec décorations"
+                        />
+                        <!-- <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Mariage Champêtre</h4>
+                                <p>Marie & Pierre - Décorations florales</p>
+                                <span class="event-type">Mariage</span>
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <div class="gallery-item" data-category="mariages">
+                        <img
+                            src="https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?w=500&h=400&fit=crop"
+                            alt="Réception de mariage avec animations"
+                        />
+                        <!-- <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Soirée Romantique</h4>
+                                <p>Sophie & Thomas - Éclairage féerique</p>
+                                <span class="event-type">Mariage</span>
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <!-- Écoles -->
+                    <div class="gallery-item" data-category="ecoles">
+                        <img
+                            src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500&h=400&fit=crop"
+                            alt="Enfants qui jouent à l'école"
+                        />
+                        <!-- <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Kermesse Scolaire</h4>
+                                <p>
+                                    École Primaire Saint-Martin - Fête de fin
+                                    d'année
+                                </p>
+                                <span class="event-type">École</span>
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <div class="gallery-item" data-category="ecoles">
+                        <img
+                            src="https://images.unsplash.com/photo-1576089172869-4f5f6f315620?w=500&h=400&fit=crop"
+                            alt="Activités ludiques pour enfants"
+                        />
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Journée Sportive</h4>
+                                <p>
+                                    Collège Jean Moulin - Tournoi inter-classes
+                                </p>
+                                <span class="event-type">École</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Entreprises -->
+                    <div class="gallery-item" data-category="entreprises">
+                        <img
+                            src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=500&h=400&fit=crop"
+                            alt="Événement d'entreprise"
+                        />
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Séminaire d'Équipe</h4>
+                                <p>Entreprise TechCorp - Team Building</p>
+                                <span class="event-type">Entreprise</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="entreprises">
+                        <img
+                            src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=500&h=400&fit=crop"
+                            alt="Fête d'entreprise"
+                        />
+                        <!-- <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Fête de Fin d'Année</h4>
+                                <p>
+                                    Cabinet Conseil Plus - Soirée collaborative
+                                </p>
+                                <span class="event-type">Entreprise</span>
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <!-- Plus d'événements variés -->
+                    <div class="gallery-item" data-category="anniversaires">
+                        <img
+                            src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=500&h=400&fit=crop"
+                            alt="Fête de pirates"
+                        />
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Aventure de Pirates</h4>
+                                <p>Nathan, 9 ans - Chasse au trésor géante</p>
+                                <span class="event-type">Anniversaire</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="mariages">
+                        <img
+                            src="https://images.unsplash.com/photo-1519167758481-83f29c5c6ca0?w=500&h=400&fit=crop"
+                            alt="Mariage en extérieur"
+                        />
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Cérémonie en Plein Air</h4>
+                                <p>Alice & Julien - Décoration bohème</p>
+                                <span class="event-type">Mariage</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="ecoles">
+                        <img
+                            src="https://images.unsplash.com/photo-1516627145497-ae1f1692cd64?w=500&h=400&fit=crop"
+                            alt="Carnaval scolaire"
+                        />
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Carnaval des Enfants</h4>
+                                <p>
+                                    École Maternelle Les Tulipes - Défilé
+                                    costumé
+                                </p>
+                                <span class="event-type">École</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+        </section>
 
-          <!-- Mariages -->
-          <div class="gallery-item" data-category="mariages">
-            <img
-              src="https://images.unsplash.com/photo-1519741497674-611481863552?w=500&h=400&fit=crop"
-              alt="Mariage élégant avec décorations"
-            />
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h4>Mariage Champêtre</h4>
-                <p>Marie & Pierre - Décorations florales</p>
-                <span class="event-type">Mariage</span>
-              </div>
+        <!-- ================= TÉMOIGNAGES CLIENTS =================
+        <section class="testimonials-realisations">
+            <div class="container">
+                <h2 class="section-title">Ce que disent nos clients</h2>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img
+                                src="https://images.unsplash.com/photo-1494790108755-2616c6106db8?w=80&h=80&fit=crop&crop=face"
+                                alt="Portrait cliente"
+                                class="testimonial-avatar"
+                            />
+                            <div class="testimonial-info">
+                                <h4>Marie Dupont</h4>
+                                <p>Maman de Emma</p>
+                                <div class="rating">★★★★★</div>
+                            </div>
+                        </div>
+                        <blockquote>
+                            "Une organisation parfaite pour l'anniversaire de ma
+                            fille ! Les enfants ont adoré le château gonflable
+                            et l'équipe était très professionnelle."
+                        </blockquote>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img
+                                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face"
+                                alt="Portrait client"
+                                class="testimonial-avatar"
+                            />
+                            <div class="testimonial-info">
+                                <h4>Pierre Martin</h4>
+                                <p>Directeur d'école</p>
+                                <div class="rating">★★★★★</div>
+                            </div>
+                        </div>
+                        <blockquote>
+                            "Chevalier Divertissements transforme chaque
+                            événement scolaire en moment magique. Nous faisons
+                            appel à eux depuis 5 ans !"
+                        </blockquote>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img
+                                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face"
+                                alt="Portrait cliente"
+                                class="testimonial-avatar"
+                            />
+                            <div class="testimonial-info">
+                                <h4>Sophie Rousseau</h4>
+                                <p>Jeune mariée</p>
+                                <div class="rating">★★★★★</div>
+                            </div>
+                        </div>
+                        <blockquote>
+                            "Notre mariage était de rêve grâce à leurs
+                            décorations magnifiques. Un service impeccable du
+                            début à la fin !"
+                        </blockquote>
+                    </div>
+                </div>
             </div>
-          </div>
+        </section> -->
 
-          <div class="gallery-item" data-category="mariages">
-            <img
-              src="https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?w=500&h=400&fit=crop"
-              alt="Réception de mariage avec animations"
-            />
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h4>Soirée Romantique</h4>
-                <p>Sophie & Thomas - Éclairage féerique</p>
-                <span class="event-type">Mariage</span>
-              </div>
+        <!-- ================= CALL TO ACTION ================= -->
+        <section class="cta-realisations">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Prêt à créer votre propre événement mémorable ?</h2>
+                    <p>
+                        Contactez-nous dès maintenant pour discuter de votre
+                        projet et obtenir un devis gratuit !
+                    </p>
+                    <div class="cta-buttons">
+                        <a
+                            href="contact.html"
+                            class="btn btn--accent btn--large"
+                            >Demander un devis</a
+                        >
+                        <a
+                            href="tel:0686000005"
+                            class="btn btn--primary btn--large"
+                            >Nous appeler</a
+                        >
+                    </div>
+                </div>
             </div>
-          </div>
+        </section>
 
-          <!-- Écoles -->
-          <div class="gallery-item" data-category="ecoles">
-            <img
-              src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500&h=400&fit=crop"
-              alt="Enfants qui jouent à l'école"
-            />
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h4>Kermesse Scolaire</h4>
-                <p>École Primaire Saint-Martin - Fête de fin d'année</p>
-                <span class="event-type">École</span>
-              </div>
+        <!-- ================= FOOTER ================= -->
+        <footer class="site-footer">
+            <div class="container">
+                <p class="footer__brand">chevalier divertissements</p>
+                <p class="footer__copy">
+                    Copyright © 2024 Chevalier Divertissements · Mentions
+                    légales
+                </p>
             </div>
-          </div>
+        </footer>
 
-          <div class="gallery-item" data-category="ecoles">
-            <img
-              src="https://images.unsplash.com/photo-1576089172869-4f5f6f315620?w=500&h=400&fit=crop"
-              alt="Activités ludiques pour enfants"
-            />
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h4>Journée Sportive</h4>
-                <p>Collège Jean Moulin - Tournoi inter-classes</p>
-                <span class="event-type">École</span>
-              </div>
-            </div>
-          </div>
+        <!-- JavaScript -->
+        <script src="../index.js"></script>
+        <script>
+            // Filtrage de la galerie
+            document.addEventListener("DOMContentLoaded", function () {
+                const filterButtons = document.querySelectorAll(".filter-btn");
+                const galleryItems = document.querySelectorAll(".gallery-item");
 
-          <!-- Entreprises -->
-          <div class="gallery-item" data-category="entreprises">
-            <img
-              src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=500&h=400&fit=crop"
-              alt="Événement d'entreprise"
-            />
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h4>Séminaire d'Équipe</h4>
-                <p>Entreprise TechCorp - Team Building</p>
-                <span class="event-type">Entreprise</span>
-              </div>
-            </div>
-          </div>
+                filterButtons.forEach((button) => {
+                    button.addEventListener("click", () => {
+                        // Retirer la classe active de tous les boutons
+                        filterButtons.forEach((btn) =>
+                            btn.classList.remove("active")
+                        );
+                        // Ajouter la classe active au bouton cliqué
+                        button.classList.add("active");
 
-          <div class="gallery-item" data-category="entreprises">
-            <img
-              src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=500&h=400&fit=crop"
-              alt="Fête d'entreprise"
-            />
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h4>Fête de Fin d'Année</h4>
-                <p>Cabinet Conseil Plus - Soirée collaborative</p>
-                <span class="event-type">Entreprise</span>
-              </div>
-            </div>
-          </div>
+                        const filterValue = button.getAttribute("data-filter");
 
-          <!-- Plus d'événements variés -->
-          <div class="gallery-item" data-category="anniversaires">
-            <img
-              src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=500&h=400&fit=crop"
-              alt="Fête de pirates"
-            />
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h4>Aventure de Pirates</h4>
-                <p>Nathan, 9 ans - Chasse au trésor géante</p>
-                <span class="event-type">Anniversaire</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="gallery-item" data-category="mariages">
-            <img
-              src="https://images.unsplash.com/photo-1519167758481-83f29c5c6ca0?w=500&h=400&fit=crop"
-              alt="Mariage en extérieur"
-            />
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h4>Cérémonie en Plein Air</h4>
-                <p>Alice & Julien - Décoration bohème</p>
-                <span class="event-type">Mariage</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="gallery-item" data-category="ecoles">
-            <img
-              src="https://images.unsplash.com/photo-1516627145497-ae1f1692cd64?w=500&h=400&fit=crop"
-              alt="Carnaval scolaire"
-            />
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h4>Carnaval des Enfants</h4>
-                <p>École Maternelle Les Tulipes - Défilé costumé</p>
-                <span class="event-type">École</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= TÉMOIGNAGES CLIENTS ================= -->
-    <section class="testimonials-realisations">
-      <div class="container">
-        <h2 class="section-title">Ce que disent nos clients</h2>
-
-        <div class="testimonials-grid">
-          <div class="testimonial-card">
-            <div class="testimonial-header">
-              <img
-                src="https://images.unsplash.com/photo-1494790108755-2616c6106db8?w=80&h=80&fit=crop&crop=face"
-                alt="Portrait cliente"
-                class="testimonial-avatar"
-              />
-              <div class="testimonial-info">
-                <h4>Marie Dupont</h4>
-                <p>Maman de Emma</p>
-                <div class="rating">★★★★★</div>
-              </div>
-            </div>
-            <blockquote>
-              "Une organisation parfaite pour l'anniversaire de ma fille ! Les
-              enfants ont adoré le château gonflable et l'équipe était très
-              professionnelle."
-            </blockquote>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="testimonial-header">
-              <img
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face"
-                alt="Portrait client"
-                class="testimonial-avatar"
-              />
-              <div class="testimonial-info">
-                <h4>Pierre Martin</h4>
-                <p>Directeur d'école</p>
-                <div class="rating">★★★★★</div>
-              </div>
-            </div>
-            <blockquote>
-              "Chevalier Divertissements transforme chaque événement scolaire en
-              moment magique. Nous faisons appel à eux depuis 5 ans !"
-            </blockquote>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="testimonial-header">
-              <img
-                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face"
-                alt="Portrait cliente"
-                class="testimonial-avatar"
-              />
-              <div class="testimonial-info">
-                <h4>Sophie Rousseau</h4>
-                <p>Jeune mariée</p>
-                <div class="rating">★★★★★</div>
-              </div>
-            </div>
-            <blockquote>
-              "Notre mariage était de rêve grâce à leurs décorations
-              magnifiques. Un service impeccable du début à la fin !"
-            </blockquote>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= CALL TO ACTION ================= -->
-    <section class="cta-realisations">
-      <div class="container">
-        <div class="cta-content">
-          <h2>Prêt à créer votre propre événement mémorable ?</h2>
-          <p>
-            Contactez-nous dès maintenant pour discuter de votre projet et
-            obtenir un devis gratuit !
-          </p>
-          <div class="cta-buttons">
-            <a href="contact.html" class="btn btn--accent btn--large"
-              >Demander un devis</a
-            >
-            <a href="tel:0686000005" class="btn btn--primary btn--large"
-              >Nous appeler</a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= FOOTER ================= -->
-    <footer class="site-footer">
-      <div class="container">
-        <p class="footer__brand">chevalier divertissements</p>
-        <p class="footer__copy">
-          Copyright © 2024 Chevalier Divertissements · Mentions légales
-        </p>
-      </div>
-    </footer>
-
-    <!-- JavaScript -->
-    <script src="../index.js"></script>
-    <script>
-      // Filtrage de la galerie
-      document.addEventListener("DOMContentLoaded", function () {
-        const filterButtons = document.querySelectorAll(".filter-btn");
-        const galleryItems = document.querySelectorAll(".gallery-item");
-
-        filterButtons.forEach((button) => {
-          button.addEventListener("click", () => {
-            // Retirer la classe active de tous les boutons
-            filterButtons.forEach((btn) => btn.classList.remove("active"));
-            // Ajouter la classe active au bouton cliqué
-            button.classList.add("active");
-
-            const filterValue = button.getAttribute("data-filter");
-
-            galleryItems.forEach((item) => {
-              if (
-                filterValue === "all" ||
-                item.getAttribute("data-category") === filterValue
-              ) {
-                item.style.display = "block";
-                item.style.animation = "fadeIn 0.5s ease";
-              } else {
-                item.style.display = "none";
-              }
+                        galleryItems.forEach((item) => {
+                            if (
+                                filterValue === "all" ||
+                                item.getAttribute("data-category") ===
+                                    filterValue
+                            ) {
+                                item.style.display = "block";
+                                item.style.animation = "fadeIn 0.5s ease";
+                            } else {
+                                item.style.display = "none";
+                            }
+                        });
+                    });
+                });
             });
-          });
-        });
-      });
-    </script>
-  </body>
+        </script>
+    </body>
 </html>

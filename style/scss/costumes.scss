@@ -14,7 +14,7 @@ $service-blue: #d4f1ff;
 $service-green: #d4ffe1;
 
 $font-body: "Poppins", sans-serif;
-$font-display: "Chewy", cursive;
+$font-display: SunnySpells;
 
 /* ================= GLOBAL STYLES ================= */
 *,
@@ -136,10 +136,6 @@ img {
         }
     }
 
-    .cta-nav {
-        margin-left: auto;
-    }
-
     .burger {
         display: none;
         flex-direction: column;
@@ -191,7 +187,6 @@ img {
 /* ================= HERO SECTION ================= */
 .hero {
     padding: 12rem 0 6rem;
-    background: linear-gradient(135deg, $service-lilac 0%, $service-pink 100%);
 
     &__content {
         text-align: center;
@@ -202,6 +197,7 @@ img {
     h1 {
         color: $primary-color;
         margin-bottom: 1rem;
+        text-align: center;
     }
 
     p {
@@ -517,15 +513,31 @@ img {
     text-align: center;
 }
 
-.mb-0 { margin-bottom: 0; }
-.mb-1 { margin-bottom: 1rem; }
-.mb-2 { margin-bottom: 2rem; }
-.mb-3 { margin-bottom: 3rem; }
+.mb-0 {
+    margin-bottom: 0;
+}
+.mb-1 {
+    margin-bottom: 1rem;
+}
+.mb-2 {
+    margin-bottom: 2rem;
+}
+.mb-3 {
+    margin-bottom: 3rem;
+}
 
-.mt-0 { margin-top: 0; }
-.mt-1 { margin-top: 1rem; }
-.mt-2 { margin-top: 2rem; }
-.mt-3 { margin-top: 3rem; }
+.mt-0 {
+    margin-top: 0;
+}
+.mt-1 {
+    margin-top: 1rem;
+}
+.mt-2 {
+    margin-top: 2rem;
+}
+.mt-3 {
+    margin-top: 3rem;
+}
 
 .fade-in {
     opacity: 0;
@@ -551,10 +563,15 @@ img {
 }
 
 @keyframes bounce {
-    0%, 20%, 53%, 80%, 100% {
-        transform: translate3d(0,0,0);
+    0%,
+    20%,
+    53%,
+    80%,
+    100% {
+        transform: translate3d(0, 0, 0);
     }
-    40%, 43% {
+    40%,
+    43% {
         transform: translate3d(0, -10px, 0);
     }
     70% {
@@ -580,11 +597,11 @@ img {
 @media (max-width: 768px) {
     .hero {
         padding: 8rem 0 3rem;
-        
+
         &__content {
             padding: 0 1rem;
         }
-        
+
         p {
             font-size: 1rem;
         }
@@ -600,7 +617,7 @@ img {
         &__image {
             height: 200px;
         }
-        
+
         &__content {
             padding: 1rem;
         }
@@ -608,7 +625,7 @@ img {
 
     .pricing-card {
         padding: 1.5rem;
-        
+
         &__price {
             font-size: 1.5rem;
         }

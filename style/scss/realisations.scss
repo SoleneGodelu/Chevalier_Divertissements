@@ -22,15 +22,21 @@ html {
 }
 
 @media (max-width: 480px) {
-    html { font-size: 56.25%; } /* 1 rem = 9 px */
+    html {
+        font-size: 56.25%;
+    } /* 1 rem = 9 px */
 }
 
 @media (min-width: 1200px) {
-    html { font-size: 68.75%; } /* 1 rem = 11 px */
+    html {
+        font-size: 68.75%;
+    } /* 1 rem = 11 px */
 }
 
 @media (min-width: 1600px) {
-    html { font-size: 75%; } /* 1 rem = 12 px */
+    html {
+        font-size: 75%;
+    } /* 1 rem = 12 px */
 }
 
 /* ================= ANIMATIONS ================= */
@@ -69,13 +75,17 @@ html {
 
 /* ================= HERO RÉALISATIONS ================= */
 .hero-realisations {
-    background: linear-gradient(135deg, rgba($primary-color, 0.1) 0%, rgba($accent-color, 0.1) 100%);
+    background: linear-gradient(
+        135deg,
+        rgba($primary-color, 0.1) 0%,
+        rgba($accent-color, 0.1) 100%
+    );
     padding: 12rem 0 6rem;
     position: relative;
     overflow: hidden;
-    
+
     &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -84,7 +94,7 @@ html {
         background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><circle cx="10" cy="10" r="1" fill="%23005c83" opacity="0.1"/><circle cx="30" cy="15" r="1.5" fill="%23f5c400" opacity="0.1"/><circle cx="50" cy="5" r="1" fill="%23005c83" opacity="0.1"/><circle cx="70" cy="12" r="1.5" fill="%23f5c400" opacity="0.1"/><circle cx="90" cy="8" r="1" fill="%23005c83" opacity="0.1"/></svg>');
         animation: float 20s ease-in-out infinite;
     }
-    
+
     &__inner {
         display: grid;
         gap: 4rem;
@@ -92,18 +102,18 @@ html {
         position: relative;
         z-index: 1;
     }
-    
+
     &__content {
         text-align: center;
         animation: slideUp 0.8s ease-out;
-        
+
         h1 {
             color: $primary-color;
             margin-bottom: 2rem;
             font-size: clamp(2.4rem, 5vw, 4.8rem);
         }
     }
-    
+
     &__subtitle {
         font-size: clamp(1.4rem, 2.5vw, 1.8rem);
         max-width: 80rem;
@@ -111,7 +121,7 @@ html {
         color: lighten($text-dark, 15%);
         line-height: 1.7;
     }
-    
+
     &__stats {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
@@ -129,12 +139,12 @@ html {
     box-shadow: 0 0.8rem 2rem rgba(#000, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: scaleIn 0.6s ease-out;
-    
+
     &:hover {
         transform: translateY(-0.5rem);
         box-shadow: 0 1.2rem 3rem rgba(#000, 0.15);
     }
-    
+
     .stat-number {
         display: block;
         font-size: clamp(2.4rem, 4vw, 3.6rem);
@@ -142,29 +152,34 @@ html {
         color: $primary-color;
         margin-bottom: 0.8rem;
     }
-    
+
     .stat-label {
         font-size: 1.2rem;
         color: lighten($text-dark, 20%);
         font-weight: 500;
     }
-    
+
     // Animation en cascade
-    &:nth-child(1) { animation-delay: 0.1s; }
-    &:nth-child(2) { animation-delay: 0.2s; }
-    &:nth-child(3) { animation-delay: 0.3s; }
+    &:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+    &:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+    &:nth-child(3) {
+        animation-delay: 0.3s;
+    }
 }
 
 /* ================= GALERIE PRINCIPALE ================= */
 .main-gallery {
     padding-block: 6rem;
-    
+
     .gallery-intro {
         text-align: center;
         max-width: 80rem;
         margin: 0 auto 3rem;
         color: lighten($text-dark, 15%);
-        font-size: 1.6rem;
         line-height: 1.6;
     }
 }
@@ -175,7 +190,7 @@ html {
     flex-wrap: wrap;
     gap: 1rem;
     margin: 3rem 0;
-    
+
     .filter-btn {
         padding: 1rem 2rem;
         background: $bg-grey;
@@ -183,36 +198,35 @@ html {
         border: none;
         border-radius: 3rem;
         font-family: $font-body;
-        font-size: 1.4rem;
         font-weight: 500;
         cursor: pointer;
         transition: all 0.3s ease;
         position: relative;
         overflow: hidden;
-        
+
         &::before {
-            content: '';
+            content: "";
             position: absolute;
             top: 0;
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, $primary-color, $accent-color);
+            background: $primary-color;
             transition: left 0.3s ease;
             z-index: -1;
         }
-        
+
         &:hover,
         &.active {
             color: $text-light;
             transform: translateY(-0.2rem);
             box-shadow: 0 0.4rem 1.2rem rgba($primary-color, 0.3);
-            
+
             &::before {
                 left: 0;
             }
         }
-        
+
         &.active {
             background: $primary-color;
         }
@@ -224,11 +238,11 @@ html {
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 2rem;
     margin-top: 4rem;
-    
+
     @media (min-width: 768px) {
         grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
     }
-    
+
     @media (min-width: 1200px) {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -242,35 +256,35 @@ html {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     background: $bg-light;
-    
-    &:hover {
-        transform: translateY(-1rem) scale(1.02);
-        box-shadow: 0 2rem 4rem rgba(#000, 0.2);
-        
-        .gallery-overlay {
-            opacity: 1;
-            backdrop-filter: blur(5px);
-        }
-        
-        img {
-            transform: scale(1.1);
-        }
-    }
-    
+
+    // &:hover {
+    //     transform: translateY(-1rem) scale(1.02);
+    //     box-shadow: 0 2rem 4rem rgba(#000, 0.2);
+
+    //     .gallery-overlay {
+    //         opacity: 1;
+    //         backdrop-filter: blur(5px);
+    //     }
+
+    //     img {
+    //         transform: scale(1.1);
+    //     }
+    // }
+
     img {
         width: 100%;
         height: 25rem;
         object-fit: cover;
         transition: transform 0.4s ease;
     }
-    
+
     .gallery-overlay {
         position: absolute;
         inset: 0;
         background: linear-gradient(
-            to top, 
-            rgba(#000, 0.8) 0%, 
-            rgba(#000, 0.4) 50%, 
+            to top,
+            rgba(#000, 0.8) 0%,
+            rgba(#000, 0.4) 50%,
             transparent 100%
         );
         display: flex;
@@ -280,25 +294,25 @@ html {
         opacity: 0;
         transition: all 0.4s ease;
     }
-    
+
     .gallery-info {
         width: 100%;
         transform: translateY(2rem);
         transition: transform 0.4s ease;
-        
+
         h4 {
             margin: 0 0 0.5rem;
             font-size: 1.8rem;
             font-weight: 600;
         }
-        
+
         p {
             margin: 0 0 1rem;
             font-size: 1.4rem;
             opacity: 0.9;
         }
     }
-    
+
     .event-type {
         display: inline-block;
         padding: 0.4rem 1rem;
@@ -310,51 +324,97 @@ html {
         text-transform: uppercase;
         letter-spacing: 0.05em;
     }
-    
+
     &:hover .gallery-info {
         transform: translateY(0);
     }
 }
 
-/* ================= TÉMOIGNAGES ================= */
-.testimonials-realisations {
-    background: linear-gradient(135deg, rgba($service-blue, 0.3) 0%, rgba($service-lilac, 0.3) 100%);
-    padding-block: 6rem;
-    position: relative;
-    
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle cx="50" cy="50" r="2" fill="%23005c83" opacity="0.1"/><circle cx="150" cy="50" r="3" fill="%23f5c400" opacity="0.1"/><circle cx="100" cy="100" r="2" fill="%23005c83" opacity="0.1"/><circle cx="50" cy="150" r="3" fill="%23f5c400" opacity="0.1"/><circle cx="150" cy="150" r="2" fill="%23005c83" opacity="0.1"/></svg>');
+// /* ================= TÉMOIGNAGES ================= */
+// .testimonials-realisations {
+//     background: linear-gradient(
+//         135deg,
+//         rgba($service-blue, 0.3) 0%,
+//         rgba($service-lilac, 0.3) 100%
+//     );
+//     padding-block: 6rem;
+//     position: relative;
+
+//     &::before {
+//         content: "";
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         right: 0;
+//         bottom: 0;
+//         background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle cx="50" cy="50" r="2" fill="%23005c83" opacity="0.1"/><circle cx="150" cy="50" r="3" fill="%23f5c400" opacity="0.1"/><circle cx="100" cy="100" r="2" fill="%23005c83" opacity="0.1"/><circle cx="50" cy="150" r="3" fill="%23f5c400" opacity="0.1"/><circle cx="150" cy="150" r="2" fill="%23005c83" opacity="0.1"/></svg>');
+//     }
+
+//     .testimonials-grid {
+//         display: grid;
+//         grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+//         gap: 3rem;
+//         margin-top: 4rem;
+//         position: relative;
+//         z-index: 1;
+//     }
+// }
+
+// .testimonial-card {
+//     background: rgba($bg-light, 0.95);
+//     backdrop-filter: blur(10px);
+//     padding: 3rem;
+//     border-radius: 1.5rem;
+//     box-shadow: 0 1rem 3rem rgba(#000, 0.1);
+//     transition: all 0.3s ease;
+//     position: relative;
+//     overflow: hidden;
+
+//     &:hover {
+//         transform: translateY(-0.5rem);
+//         box-shadow: 0 1.5rem 4rem rgba(#000, 0.15);
+//     }
+// }
+
+/* ================= CTA CONTACT ================= */
+
+.cta-realisations {
+    padding: 4rem 0;
+    background: linear-gradient(
+        135deg,
+        $primary-color 0%,
+        lighten($primary-color, 10%) 100%
+    );
+    color: $text-light;
+
+    .container {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+
+        h2 {
+            font-family: $font-display;
+            font-weight: 100;
+
+            font-size: 2.5rem;
+            margin: 0 0 1rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin: 0 0 2rem;
+            opacity: 0.9;
+        }
     }
-    
-    .testimonials-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-        gap: 3rem;
-        margin-top: 4rem;
-        position: relative;
-        z-index: 1;
+
+    &__buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .btn {
+            min-width: 200px;
+        }
     }
 }
-
-.testimonial-card {
-    background: rgba($bg-light, 0.95);
-    backdrop-filter: blur(10px);
-    padding: 3rem;
-    border-radius: 1.5rem;
-    box-shadow: 0 1rem 3rem rgba(#000, 0.1);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-
-    &:hover {
-        transform: translateY(-0.5rem);
-        box-shadow: 0 1.5rem 4rem rgba(#000, 0.15);
-    }   
-}
-
