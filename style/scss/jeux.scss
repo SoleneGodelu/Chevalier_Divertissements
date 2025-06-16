@@ -1,0 +1,346 @@
+/* style/scss/structures.scss */
+
+/* ================= VARIABLES (héritées de index.scss) ================= */
+$primary-color: #005c83;
+$accent-color: #f5c400;
+$text-dark: #21221e;
+$text-light: #ffffff;
+$bg-light: #ffffff;
+$bg-grey: #f5f5f5;
+
+$service-pink: #ffd9e3;
+$service-lilac: #e9d9ff;
+$service-blue: #d4f1ff;
+$service-green: #d4ffe1;
+
+$font-body: "Poppins", sans-serif;
+$font-display: SunnySpells;
+
+/* ================= HERO SECTION ================= */
+.structures-hero {
+    background: linear-gradient(135deg, rgba($primary-color, 0.95), rgba($primary-color, 0.8)), 
+                url('../images/realisation1.svg') center/cover;
+    padding: 12rem 0 6rem;
+    color: $text-light;
+    position: relative;
+
+    &__content {
+        text-align: center;
+        max-width: 800px;
+        margin-inline: auto;
+    }
+
+    &__subtitle {
+        font-size: 1.2rem;
+        margin-top: 2rem;
+        opacity: 0.95;
+        line-height: 1.8;
+    }
+
+    .section-title {
+        color: $text-light;
+        margin-bottom: 0;
+    }
+}
+
+/* ================= SECTIONS COMMUNES ================= */
+.structures-section,
+.jeux-section {
+    padding-block: 5rem;
+
+    .section-intro {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 4rem;
+        font-size: 1.1rem;
+        color: lighten($text-dark, 20%);
+    }
+}
+
+.jeux-section {
+    background: $bg-grey;
+}
+
+/* ================= STRUCTURES GONFLABLES ================= */
+.structures-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+
+    @media (max-width: 480px) {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+.structure-card {
+    background: $bg-light;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba($text-dark, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid transparent;
+
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 16px 48px rgba($text-dark, 0.15);
+    }
+
+    img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    &__content {
+        padding: 2rem;
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0 0 1rem;
+            color: $text-dark;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            color: lighten($text-dark, 15%);
+        }
+    }
+
+    &--pink {
+        border-color: $service-pink;
+        &:hover {
+            border-color: darken($service-pink, 20%);
+        }
+    }
+
+    &--lilac {
+        border-color: $service-lilac;
+        &:hover {
+            border-color: darken($service-lilac, 20%);
+        }
+    }
+
+    &--blue {
+        border-color: $service-blue;
+        &:hover {
+            border-color: darken($service-blue, 20%);
+        }
+    }
+
+    &--green {
+        border-color: $service-green;
+        &:hover {
+            border-color: darken($service-green, 20%);
+        }
+    }
+}
+
+.structure-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+        padding: 0.5rem 0;
+        color: lighten($text-dark, 10%);
+        font-weight: 500;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: $accent-color;
+            border-radius: 50%;
+            margin-right: 0.75rem;
+        }
+    }
+}
+
+/* ================= JEUX EN BOIS ================= */
+.jeux-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+
+    @media (max-width: 400px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.jeu-card {
+    background: $bg-light;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba($text-dark, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba($text-dark, 0.12);
+    }
+
+    img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    &__content {
+        padding: 1.5rem;
+
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 0 0 0.75rem;
+            color: $text-dark;
+        }
+
+        p {
+            margin: 0;
+            line-height: 1.6;
+            color: lighten($text-dark, 20%);
+        }
+    }
+}
+
+/* ================= INFORMATIONS PRATIQUES ================= */
+.infos-pratiques {
+    padding-block: 5rem;
+    background: linear-gradient(135deg, $primary-color, lighten($primary-color, 10%));
+    color: $text-light;
+
+    .section-title {
+        color: $text-light;
+    }
+}
+
+.infos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.info-card {
+    background: rgba($text-light, 0.1);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba($text-light, 0.2);
+    transition: background 0.3s ease;
+
+    &:hover {
+        background: rgba($text-light, 0.15);
+    }
+
+    h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin: 0 0 1rem;
+        color: $accent-color;
+    }
+
+    p {
+        margin: 0;
+        line-height: 1.7;
+        opacity: 0.95;
+    }
+}
+
+/* ================= CTA DEVIS ================= */
+.devis-cta {
+    padding-block: 5rem;
+    background: $bg-grey;
+
+    &__content {
+        text-align: center;
+        max-width: 600px;
+        margin-inline: auto;
+
+        p {
+            font-size: 1.1rem;
+            margin: 2rem 0 3rem;
+            color: lighten($text-dark, 20%);
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .btn {
+            min-width: 200px;
+            text-align: center;
+        }
+    }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .structures-hero {
+        padding: 10rem 0 4rem;
+
+        &__subtitle {
+            font-size: 1rem;
+        }
+    }
+
+    .structures-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .structure-card {
+        &__content {
+            padding: 1.5rem;
+        }
+    }
+
+    .infos-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .info-card {
+        padding: 1.5rem;
+    }
+
+    .devis-cta {
+        &__buttons {
+            flex-direction: column;
+            align-items: center;
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .structures-section,
+    .jeux-section,
+    .infos-pratiques,
+    .devis-cta {
+        padding-block: 3rem;
+    }
+
+    .jeux-grid {
+        gap: 1.5rem;
+    }
+
+    .jeu-card {
+        &__content {
+            padding: 1.25rem;
+        }
+    }
+}
