@@ -17,29 +17,52 @@ $font-body: "Poppins", sans-serif;
 $font-display: SunnySpells;
 
 /* ================= HERO SECTION ================= */
-.structures-hero {
-    background: linear-gradient(135deg, rgba($primary-color, 0.95), rgba($primary-color, 0.8)), 
-                url('../images/realisation1.svg') center/cover;
+.hero-structures {
+    background: linear-gradient(
+        135deg,
+        rgba($primary-color, 0.1) 0%,
+        rgba($accent-color, 0.1) 100%
+    );
     padding: 12rem 0 6rem;
-    color: $text-light;
     position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><circle cx="10" cy="10" r="1" fill="%23005c83" opacity="0.1"/><circle cx="30" cy="15" r="1.5" fill="%23f5c400" opacity="0.1"/><circle cx="50" cy="5" r="1" fill="%23005c83" opacity="0.1"/><circle cx="70" cy="12" r="1.5" fill="%23f5c400" opacity="0.1"/><circle cx="90" cy="8" r="1" fill="%23005c83" opacity="0.1"/></svg>');
+    }
+
+    &__inner {
+        display: grid;
+        gap: 4rem;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+    }
 
     &__content {
         text-align: center;
-        max-width: 800px;
-        margin-inline: auto;
+        animation: slideUp 0.8s ease-out;
+
+        h1 {
+            color: $primary-color;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: clamp(2.4rem, 5vw, 4.8rem);
+        }
     }
 
     &__subtitle {
-        font-size: 1.2rem;
-        margin-top: 2rem;
-        opacity: 0.95;
-        line-height: 1.8;
-    }
-
-    .section-title {
-        color: $text-light;
-        margin-bottom: 0;
+        font-size: clamp(1.2rem, 2vw, 1.4rem);
+        max-width: 80rem;
+        margin: 0 auto 3rem;
+        color: lighten($text-dark, 15%);
+        line-height: 1.7;
     }
 }
 
@@ -150,7 +173,7 @@ $font-display: SunnySpells;
         font-weight: 500;
 
         &::before {
-            content: '';
+            content: "";
             display: inline-block;
             width: 8px;
             height: 8px;
@@ -212,7 +235,11 @@ $font-display: SunnySpells;
 /* ================= INFORMATIONS PRATIQUES ================= */
 .infos-pratiques {
     padding-block: 5rem;
-    background: linear-gradient(135deg, $primary-color, lighten($primary-color, 10%));
+    background: linear-gradient(
+        135deg,
+        $primary-color,
+        lighten($primary-color, 10%)
+    );
     color: $text-light;
 
     .section-title {

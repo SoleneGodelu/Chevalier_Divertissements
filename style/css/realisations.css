@@ -86,7 +86,7 @@ html {
   font-size: clamp(2.4rem, 5vw, 4.8rem);
 }
 .hero-realisations__subtitle {
-  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
   max-width: 80rem;
   margin: 0 auto 3rem;
   color: #484b42;
@@ -97,43 +97,6 @@ html {
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   gap: 2rem;
   margin-top: 3rem;
-}
-
-.stat-item {
-  text-align: center;
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.9);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  border-radius: 1rem;
-  box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: scaleIn 0.6s ease-out;
-}
-.stat-item:hover {
-  transform: translateY(-0.5rem);
-  box-shadow: 0 1.2rem 3rem rgba(0, 0, 0, 0.15);
-}
-.stat-item .stat-number {
-  display: block;
-  font-size: clamp(2.4rem, 4vw, 3.6rem);
-  font-weight: 700;
-  color: #005c83;
-  margin-bottom: 0.8rem;
-}
-.stat-item .stat-label {
-  font-size: 1.2rem;
-  color: #56584e;
-  font-weight: 500;
-}
-.stat-item:nth-child(1) {
-  animation-delay: 0.1s;
-}
-.stat-item:nth-child(2) {
-  animation-delay: 0.2s;
-}
-.stat-item:nth-child(3) {
-  animation-delay: 0.3s;
 }
 
 /* ================= GALERIE PRINCIPALE ================= */
@@ -214,14 +177,14 @@ html {
   border-radius: 1.2rem;
   box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.1);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
   background: #ffffff;
 }
 .gallery-item img {
   width: 100%;
-  height: 25rem;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
+  aspect-ratio: 4/3;
   transition: transform 0.4s ease;
 }
 .gallery-item .gallery-overlay {
