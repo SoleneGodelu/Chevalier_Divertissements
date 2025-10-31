@@ -76,135 +76,150 @@
         </section>
 
         <!-- Categories Section -->
-        <section class="categories" id="categories">
+        <section class="main-gallery">
             <div class="container">
-                <h2 class="section-title">Nos Catégories de Costumes</h2>
-                <p style="text-align: center; max-width: 800px; margin: 0 auto">
-                    Découvrez notre large gamme de costumes et déguisements pour
-                    tous les âges et toutes les occasions.
+                <h2 class="section-title">Nos costumes</h2>
+                <p class="gallery-intro">
+                    Découvrez notre large gamme de costumes et déguisements pour tous les âges et toutes les occasions !
                 </p>
 
-                <div class="categories__grid">
-                    <!-- Contes de Fées -->
-                    <div class="category-card">
-                        <div class="category-card__image">
-                            <img
-                                src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=250&fit=crop"
-                                alt="Costumes Contes de Fées"
-                            />
-                        </div>
-                        <div class="category-card__content">
-                            <h3 class="category-card__title">Contes de Fées</h3>
-                            <p class="category-card__description">
-                                Princesses, princes, fées et sorcières pour
-                                vivre vos contes préférés
-                            </p>
-                            <a href="#contact" class="btn btn--primary"
-                                >Voir les costumes</a
-                            >
-                        </div>
+                <div class="gallery-filter">
+                    <button class="filter-btn active" data-filter="all">
+                        Tout voir
+                    </button>
+                    <button class="filter-btn" data-filter="halloween">
+                        Halloween
+                    </button>
+                    <button class="filter-btn" data-filter="renaissance">
+                        Époque Renaissance
+                    </button>
+                    <button class="filter-btn" data-filter="super-heros">
+                        Super-Héros
+                    </button>
+                </div>
+
+                <div class="gallery-grid" id="galleryGrid">
+                    <div class="gallery-item" data-category="halloween">
+                        <img
+                            src="/images/costume_halloween.webp"
+                            alt="Costumes"
+                        />
                     </div>
 
-                    <!-- Super-Héros -->
-                    <div class="category-card">
-                        <div class="category-card__image">
-                            <img
-                                src="https://images.unsplash.com/photo-1635805737707-575885ab0820?w=400&h=250&fit=crop"
-                                alt="Costumes Super-Héros"
-                            />
-                        </div>
-                        <div class="category-card__content">
-                            <h3 class="category-card__title">Super-Héros</h3>
-                            <p class="category-card__description">
-                                Batman, Spider-Man, Wonder Woman et bien
-                                d'autres héros légendaires
-                            </p>
-                            <a href="#contact" class="btn btn--primary"
-                                >Voir les costumes</a
-                            >
-                        </div>
+                    <div class="gallery-item" data-category="renaissance">
+                        <img 
+                            src="/images/costume_renaissance (1).webp"
+                            alt="Costumes"
+                        />
+                    </div><div class="gallery-item" data-category="renaissance">
+                        <img 
+                            src="/images/costume_renaissance (3).webp"
+                            alt="Costumes"
+                        />
+                    </div><div class="gallery-item" data-category="renaissance">
+                        <img 
+                            src="/images/costume_renaissance (4).webp"
+                            alt="Costumes"
+                        />
+                    </div><div class="gallery-item" data-category="renaissance">
+                        <img 
+                            src="/images/costume_renaissance (5).webp"
+                            alt="Costumes"
+                        />
+                    </div><div class="gallery-item" data-category="renaissance">
+                        <img 
+                            src="/images/costume_renaissance (8).webp"
+                            alt="Costumes"
+                        />
+                    </div><div class="gallery-item" data-category="renaissance">
+                        <img 
+                            src="/images/costume_renaissance (10).webp"
+                            alt="Costumes"
+                        />
+                    </div><div class="gallery-item" data-category="renaissance">
+                        <img 
+                            src="/images/costume_renaissance (11).webp"
+                            alt="Costumes"
+                        />
+                    </div><div class="gallery-item" data-category="renaissance">
+                        <img 
+                            src="/images/costume_renaissance (12).webp"
+                            alt="Costumes"
+                        />
+                    </div><div class="gallery-item" data-category="renaissance">
+                        <img 
+                            src="/images/costume_renaissance (13).webp"
+                            alt="Costumes"
+                        />
                     </div>
-
-                    <!-- Période Historique -->
-                    <div class="category-card">
-                        <div class="category-card__image">
-                            <img
-                                src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=250&fit=crop"
-                                alt="Costumes Historiques"
-                            />
-                        </div>
-                        <div class="category-card__content">
-                            <h3 class="category-card__title">
-                                Période Historique
-                            </h3>
-                            <p class="category-card__description">
-                                Moyen Âge, Renaissance, Époque Victorian, années
-                                20 et plus
-                            </p>
-                            <a href="#contact" class="btn btn--primary"
-                                >Voir les costumes</a
-                            >
-                        </div>
+                    <div class="gallery-item" data-category="renaissance">
+                        <img 
+                            src="/images/costume_renaissance (14).webp"
+                            alt="Costumes"
+                        />
                     </div>
-
-                    <!-- Halloween -->
-                    <div class="category-card">
-                        <div class="category-card__image">
-                            <img
-                                src="https://images.unsplash.com/photo-1509557965043-36ee0b2fa2b3?w=400&h=250&fit=crop"
-                                alt="Costumes Halloween"
-                            />
-                        </div>
-                        <div class="category-card__content">
-                            <h3 class="category-card__title">Halloween</h3>
-                            <p class="category-card__description">
-                                Vampires, sorcières, zombies et créatures
-                                effrayantes
-                            </p>
-                            <a href="#contact" class="btn btn--primary"
-                                >Voir les costumes</a
-                            >
-                        </div>
+                    <div class="gallery-item" data-category="renaissance">
+                        <img 
+                            src="/images/costume_renaissance (16).webp"
+                            alt="Costumes"
+                        />
+                    </div><div class="gallery-item" data-category="renaissance">
+                        <img 
+                            src="/images/costume_renaissance (17).webp"
+                            alt="Costumes"
+                        />
+                    </div><div class="gallery-item" data-category="renaissance">
+                        <img 
+                            src="/images/costume_renaissance (18).webp"
+                            alt="Costumes"
+                        />
+                    </div><div class="gallery-item" data-category="renaissance">
+                        <img 
+                            src="/images/costume_renaissance (19).webp"
+                            alt="Costumes"
+                        />
                     </div>
-
-                    <!-- Animaux -->
-                    <div class="category-card">
-                        <div class="category-card__image">
-                            <img
-                                src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=400&h=250&fit=crop"
-                                alt="Costumes Animaux"
-                            />
-                        </div>
-                        <div class="category-card__content">
-                            <h3 class="category-card__title">Animaux</h3>
-                            <p class="category-card__description">
-                                Lions, pandas, lapins et autres animaux
-                                adorables
-                            </p>
-                            <a href="#contact" class="btn btn--primary"
-                                >Voir les costumes</a
-                            >
-                        </div>
+                    <div class="gallery-item" data-category="renaissance">
+                        <img 
+                            src="/images/costume_renaissance (20).webp"
+                            alt="Costumes"
+                        />
                     </div>
-
-                    <!-- Professions -->
-                    <div class="category-card">
-                        <div class="category-card__image">
-                            <img
-                                src="https://images.unsplash.com/photo-1582719471137-c3967ffb1c42?w=400&h=250&fit=crop"
-                                alt="Costumes Professions"
-                            />
-                        </div>
-                        <div class="category-card__content">
-                            <h3 class="category-card__title">Professions</h3>
-                            <p class="category-card__description">
-                                Médecin, pompier, policier, chef cuisinier et
-                                métiers du quotidien
-                            </p>
-                            <a href="#contact" class="btn btn--primary"
-                                >Voir les costumes</a
-                            >
-                        </div>
+                    <div class="gallery-item" data-category="renaissance">
+                        <img 
+                            src="/images/costume_renaissance (22).webp"
+                            alt="Costumes"
+                        />
+                    </div>
+                    <div class="gallery-item" data-category="renaissance">
+                        <img 
+                            src="/images/costume_renaissance (23).webp"
+                            alt="Costumes"
+                        />
+                    </div>
+                    <div class="gallery-item" data-category="renaissance">
+                        <img 
+                            src="/images/costume_renaissance (24).webp"
+                            alt="Costumes"
+                        />
+                    </div>
+                    <div class="gallery-item" data-category="renaissance">
+                        <img 
+                            src="/images/costume_renaissance (25).webp"
+                            alt="Costumes"
+                        />
+                    </div>
+                    <div class="gallery-item" data-category="renaissance">
+                        <img 
+                            src="/images/costume_renaissance (26).webp"
+                            alt="Costumes"
+                        />
+                    </div><div class="gallery-item" data-category="halloween">
+                        <img 
+                            src="/images/costume_halloween (2).webp"
+                            alt="Costumes"
+                        />
+                    </div>
                     </div>
                 </div>
             </div>
@@ -328,6 +343,41 @@
                             block: "start",
                         });
                     }
+                });
+            });
+        </script>
+         <!-- JavaScript -->
+        <script src="../index.js"></script>
+        <script>
+            // Filtrage de la galerie
+            document.addEventListener("DOMContentLoaded", function () {
+                const filterButtons = document.querySelectorAll(".filter-btn");
+                const galleryItems = document.querySelectorAll(".gallery-item");
+
+                filterButtons.forEach((button) => {
+                    button.addEventListener("click", () => {
+                        // Retirer la classe active de tous les boutons
+                        filterButtons.forEach((btn) =>
+                            btn.classList.remove("active")
+                        );
+                        // Ajouter la classe active au bouton cliqué
+                        button.classList.add("active");
+
+                        const filterValue = button.getAttribute("data-filter");
+
+                        galleryItems.forEach((item) => {
+                            if (
+                                filterValue === "all" ||
+                                item.getAttribute("data-category") ===
+                                    filterValue
+                            ) {
+                                item.style.display = "block";
+                                item.style.animation = "fadeIn 0.5s ease";
+                            } else {
+                                item.style.display = "none";
+                            }
+                        });
+                    });
                 });
             });
         </script>

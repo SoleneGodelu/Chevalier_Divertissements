@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* style/scss/costumes.scss */
 /* ================= VARIABLES ================= */
 /* ================= GLOBAL STYLES ================= */
@@ -191,56 +192,137 @@ img {
 }
 
 /* ================= CATEGORIES SECTION ================= */
-.categories {
-  padding: 4rem 0;
+.main-gallery {
+  padding-block: 6rem;
 }
-.categories__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
+.main-gallery .gallery-intro {
+  text-align: center;
+  max-width: 80rem;
+  margin: 0 auto 3rem;
+  color: #484b42;
+  line-height: 1.6;
 }
 
-.category-card {
-  background: white;
-  border-radius: 1rem;
-  overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.gallery-filter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 3rem 0;
 }
-.category-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-}
-.category-card:hover .category-card__image img {
-  transform: scale(1.05);
-}
-.category-card__image {
-  height: 250px;
-  overflow: hidden;
+.gallery-filter .filter-btn {
+  padding: 1rem 2rem;
+  background: #f5f5f5;
+  color: #21221e;
+  border: none;
+  border-radius: 3rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
   position: relative;
+  overflow: hidden;
 }
-.category-card__image img {
+.gallery-filter .filter-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
   width: 100%;
   height: 100%;
+  background: #005c83;
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+.gallery-filter .filter-btn:hover, .gallery-filter .filter-btn.active {
+  color: #ffffff;
+  transform: translateY(-0.2rem);
+  box-shadow: 0 0.4rem 1.2rem rgba(0, 92, 131, 0.3);
+}
+.gallery-filter .filter-btn:hover::before, .gallery-filter .filter-btn.active::before {
+  left: 0;
+}
+.gallery-filter .filter-btn.active {
+  background: #005c83;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+}
+@media (min-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  }
+}
+@media (min-width: 1200px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.2rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #ffffff;
+}
+.gallery-item #costume {
+  border-radius: 0;
+}
+.gallery-item img {
+  width: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
-  transition: transform 0.3s ease;
+  -o-object-position: top;
+     object-position: top;
+  aspect-ratio: 4/3.5;
+  transition: transform 0.4s ease;
 }
-.category-card__content {
-  padding: 1.5rem;
-  text-align: center;
+.gallery-item .gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem;
+  color: #ffffff;
+  opacity: 0;
+  transition: all 0.4s ease;
 }
-.category-card__title {
-  font-size: 1.25rem;
-  font-weight: 600;
+.gallery-item .gallery-info {
+  width: 100%;
+  transform: translateY(2rem);
+  transition: transform 0.4s ease;
+}
+.gallery-item .gallery-info h4 {
   margin: 0 0 0.5rem;
-  color: #005c83;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
-.category-card__description {
-  color: #666;
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
+.gallery-item .gallery-info p {
+  margin: 0 0 1rem;
+  font-size: 1.4rem;
+  opacity: 0.9;
+}
+.gallery-item .event-type {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background: rgba(245, 196, 0, 0.9);
+  color: #21221e;
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.gallery-item:hover .gallery-info {
+  transform: translateY(0);
 }
 
 /* ================= PRICING SECTION ================= */
@@ -585,4 +667,117 @@ img {
     font-size: 0.9rem;
   }
 }
-/* ================= DARK MODE SUPPORT (optionnel) ================= *//*# sourceMappingURL=costumes.css.map */
+/* ================= DARK MODE SUPPORT (optionnel) ================= */
+/* =============================
+   🌐 Responsive design - page Costumes
+============================= */
+/* ---- Hero section ---- */
+@media (max-width: 992px) {
+  .hero-costumes__inner {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 3rem 1rem;
+  }
+  .hero-costumes__subtitle {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .hero-costumes__subtitle {
+    padding: 0 1rem;
+    font-size: 0.95rem;
+  }
+}
+/* ---- Filtres ---- */
+@media (max-width: 768px) {
+  .gallery-filter {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+  }
+  .filter-btn {
+    flex: 0 0 auto;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+/* ---- Galerie ---- */
+@media (max-width: 1200px) {
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.25rem;
+  }
+}
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+  }
+  .gallery-item img {
+    aspect-ratio: 4/3;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: top;
+       object-position: top;
+  }
+}
+/* ---- Tarifs ---- */
+@media (max-width: 992px) {
+  .pricing__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .pricing__grid {
+    grid-template-columns: 1fr;
+  }
+  .pricing-card {
+    padding: 1.5rem;
+    text-align: center;
+  }
+  .pricing-card__price {
+    font-size: 1.8rem;
+  }
+}
+/* ---- CTA contact ---- */
+@media (max-width: 768px) {
+  .contact-cta {
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+  .contact-cta p {
+    font-size: 1rem;
+    margin: 1rem auto;
+    max-width: 500px;
+  }
+  .contact-cta .btn {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+/* ---- Global ---- */
+@media (max-width: 480px) {
+  body {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  .section-title {
+    font-size: 1.5rem;
+  }
+  .btn {
+    padding: 0.7rem 1rem;
+    font-size: 0.95rem;
+  }
+  .site-footer {
+    padding: 2rem 0;
+  }
+}/*# sourceMappingURL=costumes.css.map */
