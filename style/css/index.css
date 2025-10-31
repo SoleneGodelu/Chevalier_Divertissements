@@ -497,7 +497,7 @@ img {
     padding: 8rem 0 3rem;
   }
   .hero h1 {
-    font-size: clamp(1.5rem, 5vw, 3rem);
+    font-size: clamp(2rem, 7vw, 3.5rem);
     line-height: 1.3;
   }
   .hero__text p {
@@ -527,11 +527,13 @@ img {
     margin-bottom: 2rem;
   }
   .service-card img {
-    height: 300px;
+    height: 200px;
+    order: 2;
   }
   .service-card__content {
     padding: 1.5rem;
     gap: 1.5rem;
+    order: 1;
   }
   .service-card__content h3 {
     font-size: clamp(1.3rem, 4vw, 1.8rem);
@@ -551,7 +553,8 @@ img {
     gap: 0.75rem;
   }
   .realisations__gallery img {
-    height: 15rem;
+    height: auto;
+    aspect-ratio: 4/3;
   }
   .realisations a {
     width: 100%;
@@ -601,7 +604,7 @@ img {
     padding: 7rem 0 2rem;
   }
   .hero h1 {
-    font-size: clamp(1.3rem, 4vw, 2rem);
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
   }
   .hero__text p {
     font-size: 0.85rem;
@@ -611,11 +614,13 @@ img {
   }
   /* Services cards très compactes */
   .service-card img {
-    height: 250px;
+    height: 180px;
+    order: 2;
   }
   .service-card__content {
     padding: 1.25rem;
     gap: 1rem;
+    order: 1;
   }
   .service-card__content h3 {
     font-size: 1.2rem;
@@ -628,7 +633,8 @@ img {
     grid-template-columns: 1fr;
   }
   .realisations__gallery img {
-    height: 12rem;
+    height: auto;
+    aspect-ratio: 4/3;
   }
   /* Devis formulaire 1 colonne */
   .devis__form .form-group input,
