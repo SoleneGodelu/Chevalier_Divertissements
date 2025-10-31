@@ -495,6 +495,48 @@ img {
 
 /* ================= TABLETTE (≤ 992px) ================= */
 @media (max-width: 992px) {
+    /* Navbar - Fix burger à droite */
+    .navbar {
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .burger {
+            display: flex;
+            order: 3;
+            margin-left: auto;
+        }
+
+        .cta-nav {
+            display: none;
+        }
+
+        .menu {
+            position: fixed;
+            inset: 0;
+            background: $primary-color;
+            padding: min(20vh, 6rem) 2rem;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            z-index: 999;
+
+            ul {
+                flex-direction: column;
+                gap: 1.5rem;
+
+                li a {
+                    font-size: 1.5rem;
+                }
+            }
+
+            &.open {
+                transform: translateX(0);
+            }
+        }
+    }
+
     /* Hero */
     .hero {
         padding: 10rem 0 4rem;
@@ -579,7 +621,7 @@ img {
 
     /* Section titles plus petits */
     .section-title {
-        font-size: clamp(1.5rem, 5vw, 2.5rem);
+        font-size: clamp(2rem, 6vw, 3rem);
         margin-bottom: 1rem;
     }
 
@@ -627,7 +669,7 @@ img {
 
     .service-card {
         img {
-            height: 200px;
+            height: 150px;
             order: 2;
         }
 
@@ -741,7 +783,7 @@ img {
     /* Services cards très compactes */
     .service-card {
         img {
-            height: 180px;
+            height: 130px;
             order: 2;
         }
 
