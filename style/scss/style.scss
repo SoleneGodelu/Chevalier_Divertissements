@@ -1,36 +1,255 @@
-// /* Réinitialisation de base  */
-// * {
-//     box-sizing: border-box;
-//     margin: 0;
-//     padding: 0;
-// }
+/* Réinitialisation de base  */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-// body {
-//     font-size: 1.1rem;
-// }
+/* =============================
+   🌐 Responsive global — à coller en bas de style.scss
+   (ne modifie ni couleurs ni contenus)
+============================= */
 
-// /* Valeur par défaut pour les écrans « moyens » (tablettes en mode portrait) */
-// html {
-//     font-size: 62.5%;
-// } /* 1 rem = 10 px */
+/* ---- Conteneurs & images ---- */
+.container,
+.coontainer {
+    /* corrige la coquille présente sur la page costumes */
+    width: min(92%, 1200px);
+    margin-inline: auto;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 
-// // /* Petits smartphones : on réduit légèrement */
-// @media (max-width: 480px) {
-//     html {
-//         font-size: 56.25%;
-//     } /* 1 rem = 9 px  */
-// }
+/* ---- Navbar : menu mobile replié, s'ouvre avec .menu.open (voir index.js) ---- */
+@media (max-width: 768px) {
+    .navbar .container {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 0.5rem;
+        padding-block: 0.75rem;
+    }
 
-// /* Grands laptops et desktops : on agrandit */
-// @media (min-width: 1200px) {
-//     html {
-//         font-size: 68.75%;
-//     } /* 1 rem = 11 px */
-// }
+    .navbar .burger {
+        display: inline-flex;
+    }
 
-// /* Ultra-wide (≥ 1600 px) : encore un cran */
-// @media (min-width: 1600px) {
-//     html {
-//         font-size: 75%;
-//     } /* 1 rem = 12 px */
-// }
+    .navbar .menu {
+        position: fixed;
+        inset: 64px 0 auto 0; /* panneau sous la barre */
+        background: #fff;
+        border-top: 1px solid rgba(0, 0, 0, 0.06);
+        padding: 0.75rem 1rem;
+        transform: translateY(-10px);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+    }
+    .navbar .menu ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        margin: 0;
+        padding: 0;
+    }
+    .navbar .menu.open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    .navbar .cta-nav {
+        display: none;
+    }
+}
+
+/* ---- Hero générique (toutes variantes) ---- */
+@media (max-width: 992px) {
+    .hero__inner,
+    .hero-costumes__inner,
+    .hero-structures__inner,
+    .hero-realisations__inner,
+    .contact-hero__inner {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 3rem 1rem;
+    }
+    .hero__image img,
+    .contact-hero__image img {
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 480px) {
+    .hero__image img,
+    .contact-hero__image img {
+        width: 85%;
+    }
+}
+
+/* ---- Barres de filtres (galeries) ---- */
+@media (max-width: 768px) {
+    .gallery-filter {
+        display: flex;
+        gap: 0.5rem;
+        padding: 0.5rem;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .gallery-filter .filter-btn {
+        flex: 0 0 auto;
+        white-space: nowrap;
+        padding: 0.6rem 1rem;
+    }
+}
+
+/* ---- Grilles d’images / cartes ---- */
+@media (max-width: 1200px) {
+    .realisations__gallery,
+    .gallery-grid,
+    .structures-grid,
+    .jeux-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.25rem;
+    }
+}
+@media (max-width: 768px) {
+    .realisations__gallery,
+    .gallery-grid,
+    .structures-grid,
+    .jeux-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1rem;
+    }
+    .gallery-item img {
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        object-position: top;
+    }
+    .structure-card,
+    .jeu-card,
+    .service-card {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 1.25rem;
+    }
+    .structure-card img,
+    .jeu-card img,
+    .service-card img {
+        border-radius: 0.75rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* ---- Sections infos / FAQ (listes en cartes) ---- */
+@media (max-width: 992px) {
+    .infos-grid,
+    .faq__grid,
+    .contact-info__grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .info-card,
+    .faq-item,
+    .contact-card {
+        text-align: center;
+        padding: 1.25rem;
+    }
+}
+
+/* ---- Formulaires (devis & contact) ---- */
+@media (max-width: 1100px) {
+    .devis_content,
+    .contact-form-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+@media (max-width: 768px) {
+    .devis__form,
+    .contact-form .form-row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .checkbox-group {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+}
+
+/* ---- Grilles de tarifs / CTA ---- */
+@media (max-width: 992px) {
+    .pricing__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+}
+@media (max-width: 600px) {
+    .pricing__grid {
+        grid-template-columns: 1fr;
+    }
+    .pricing-card {
+        padding: 1.5rem;
+        text-align: center;
+    }
+    .pricing-card__price {
+        font-size: 1.8rem;
+    }
+    .cta-contact,
+    .cta-realisations,
+    .contact-cta,
+    .devis-cta {
+        text-align: center;
+        padding: 3rem 1rem;
+    }
+    .cta-contact__buttons,
+    .cta-buttons,
+    .devis-cta__buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .cta-contact__buttons .btn,
+    .cta-buttons .btn,
+    .devis-cta__buttons .btn {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+/* ---- Accessibilité & lisibilité mobile ---- */
+@media (max-width: 480px) {
+    body {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+    .section-title {
+        font-size: 1.5rem;
+    }
+    .btn {
+        padding: 0.7rem 1rem;
+        font-size: 0.95rem;
+    }
+    .site-footer {
+        padding: 2rem 0;
+    }
+}
+
+/* ---- Sécurité d’affichage des liens email ---- */
+a[href^="mailto:"] {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    max-width: 100%;
+    display: inline-block;
+}
