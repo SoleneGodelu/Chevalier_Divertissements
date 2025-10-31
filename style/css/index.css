@@ -431,6 +431,8 @@ img {
     display: flex;
     order: 3;
     margin-left: auto;
+    z-index: 1001;
+    position: relative;
   }
   .navbar .cta-nav {
     display: none;
@@ -442,14 +444,32 @@ img {
     padding: min(20vh, 6rem) 2rem;
     transform: translateX(100%);
     transition: transform 0.3s ease;
-    z-index: 999;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .navbar .menu ul {
+    display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar .menu ul li {
+    text-align: center;
   }
   .navbar .menu ul li a {
+    color: #ffffff;
     font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    display: block;
+    padding: 0.5rem;
+  }
+  .navbar .menu ul li a:hover {
+    opacity: 0.75;
   }
   .navbar .menu.open {
     transform: translateX(0);
