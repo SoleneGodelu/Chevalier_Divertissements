@@ -626,8 +626,14 @@ img {
   .hero__content {
     padding: 0 1rem;
   }
+  .hero h1 {
+    font-size: clamp(2.2rem, 6vw, 3rem) !important;
+    line-height: 1.2 !important;
+    margin-bottom: 1.5rem;
+  }
   .hero p {
-    font-size: 1rem;
+    font-size: clamp(1.4rem, 3.5vw, 1.6rem) !important;
+    line-height: 1.65 !important;
   }
   .categories,
   .pricing,
@@ -640,14 +646,22 @@ img {
   .category-card__content {
     padding: 1rem;
   }
+  .category-card__content h3 {
+    font-size: clamp(1.6rem, 4vw, 2rem) !important;
+    line-height: 1.3;
+  }
   .pricing-card {
     padding: 1.5rem;
   }
+  .pricing-card__title {
+    font-size: clamp(1.4rem, 3.5vw, 1.8rem) !important;
+  }
   .pricing-card__price {
-    font-size: 1.5rem;
+    font-size: clamp(1.8rem, 4vw, 2rem) !important;
   }
   .section-title {
-    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    font-size: clamp(2rem, 5.5vw, 3rem) !important;
+    line-height: 1.2;
   }
 }
 @media (max-width: 480px) {

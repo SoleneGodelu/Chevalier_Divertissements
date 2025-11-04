@@ -57,6 +57,9 @@ img {
   }
   .navbar .burger {
     display: inline-flex;
+    position: relative;
+    z-index: 1001;
+    cursor: pointer;
   }
   .navbar .menu {
     position: fixed;
@@ -261,10 +264,86 @@ img {
     padding: 2rem 0;
   }
 }
-/* ---- Sécurité d’affichage des liens email ---- */
+/* ---- Sécurité d'affichage des liens email ---- */
 a[href^="mailto:"] {
   overflow-wrap: anywhere;
   word-break: break-word;
   max-width: 100%;
   display: inline-block;
+}
+
+/* =============================
+   📱 Typographie mobile harmonieuse
+============================= */
+@media (max-width: 768px) {
+  /* Titres principaux */
+  h1, .section-title {
+    font-size: clamp(2.2rem, 5vw, 3.2rem) !important;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+  
+  h2 {
+    font-size: clamp(1.8rem, 4vw, 2.4rem) !important;
+    line-height: 1.3;
+    margin-bottom: 1.2rem;
+  }
+  
+  h3 {
+    font-size: clamp(1.5rem, 3.5vw, 2rem) !important;
+    line-height: 1.35;
+    margin-bottom: 1rem;
+  }
+  
+  h4 {
+    font-size: clamp(1.3rem, 3vw, 1.6rem) !important;
+    line-height: 1.4;
+  }
+  
+  /* Texte de corps */
+  p, li, a, span, div {
+    font-size: clamp(1.4rem, 3.5vw, 1.6rem) !important;
+    line-height: 1.6;
+  }
+  
+  /* Boutons */
+  .btn {
+    font-size: clamp(1.4rem, 3.5vw, 1.6rem) !important;
+    padding: 1.2rem 2rem !important;
+    line-height: 1.4;
+  }
+  
+  /* Labels et petits textes */
+  label, small, .small-text {
+    font-size: clamp(1.2rem, 3vw, 1.4rem) !important;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajustements pour très petits écrans */
+  h1, .section-title {
+    font-size: clamp(2rem, 6vw, 2.8rem) !important;
+    margin-bottom: 1.2rem;
+  }
+  
+  h2 {
+    font-size: clamp(1.6rem, 5vw, 2.2rem) !important;
+  }
+  
+  p, li {
+    font-size: clamp(1.4rem, 4vw, 1.6rem) !important;
+    line-height: 1.65;
+    margin-bottom: 1rem;
+  }
+  
+  /* Espacement entre paragraphes */
+  p + p {
+    margin-top: 1rem;
+  }
+  
+  /* Cards et contenus */
+  .card, .service-card, .gallery-item {
+    padding: 1.5rem !important;
+  }
 }/*# sourceMappingURL=style.css.map */

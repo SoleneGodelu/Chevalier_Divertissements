@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Questions fréquentes sur les services de Chevalier Divertissements : locations, tarifs, réservations et livraison."
+    />
+
+    <title>FAQ - Chevalier Divertissements</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg?v=2" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico?v=2" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chewy&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../style/css/style.css" />
+    <link rel="stylesheet" href="../style/css/index.css" />
+    <link rel="stylesheet" href="../style/css/contact.css" />
+
+    <style>
+      .faq-section {
+        padding: 4rem 0;
+      }
+
+      .faq-item {
+        background: #fff;
+        border-radius: 0.75rem;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .faq-item:hover {
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+        transform: translateY(-2px);
+      }
+
+      .faq-question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: #1e40af;
+      }
+
+      .faq-icon {
+        font-size: 1.5rem;
+        transition: transform 0.3s ease;
+      }
+
+      .faq-item.active .faq-icon {
+        transform: rotate(45deg);
+      }
+
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, margin-top 0.3s ease;
+        color: #666;
+        line-height: 1.7;
+      }
+
+      .faq-item.active .faq-answer {
+        max-height: 500px;
+        margin-top: 1rem;
+      }
+
+      .faq-category {
+        margin-bottom: 3rem;
+      }
+
+      .faq-category-title {
+        font-size: 2rem;
+        color: #333;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="navbar">
+      <div class="container">
+        <a href="../index.html" class="logo">
+          <img src="../images/logo.svg" alt="Logo Chevalier Divertissements" />
+        </a>
+
+        <nav class="menu">
+          <ul>
+            <li><a href="realisations.html">Nos réalisations</a></li>
+            <li><a href="costumes.html">Costumes & déguisements</a></li>
+            <li><a href="jeux.html">Structures gonflables & jeux</a></li>
+          </ul>
+        </nav>
+
+        <a href="contact.html" class="btn btn--accent cta-nav"
+          >Nous contacter</a
+        >
+        <button class="burger" aria-label="Ouvrir le menu mobile">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="contact-hero">
+      <div class="container contact-hero__inner">
+        <div class="contact-hero__content">
+          <h1 class="section-title">Foire Aux Questions</h1>
+          <p class="contact-hero__subtitle">
+            Trouvez rapidement les réponses à vos questions sur nos services
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+      <div class="container">
+        <!-- Réservations -->
+        <div class="faq-category">
+          <h2 class="faq-category-title">📅 Réservations & Disponibilités</h2>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span
+                >Comment réserver une structure gonflable ou un costume ?</span
+              >
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Vous pouvez nous contacter par téléphone au 07 67 80 02 30 ou par
+              email à chevalier.divertissements@gmail.com. Nous vérifierons la
+              disponibilité et établirons un devis personnalisé selon vos
+              besoins.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Combien de temps à l'avance dois-je réserver ?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Nous vous recommandons de réserver au moins 2 semaines à l'avance,
+              surtout pour les week-ends et périodes de vacances scolaires. Pour
+              les événements importants, n'hésitez pas à nous contacter
+              plusieurs mois en avance.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Quelle est votre politique d'annulation ?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Les annulations faites plus de 7 jours avant l'événement sont
+              remboursables à 100%. Entre 3 et 7 jours, 50% du montant est
+              remboursé. Moins de 3 jours avant, aucun remboursement n'est
+              possible sauf cas de force majeure.
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarifs -->
+        <div class="faq-category">
+          <h2 class="faq-category-title">💰 Tarifs & Paiements</h2>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Quels sont vos tarifs de location ?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Nos tarifs varient selon le type de matériel, la durée de location
+              et la période. Contactez-nous pour un devis gratuit et
+              personnalisé adapté à votre événement.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Quels modes de paiement acceptez-vous ?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Nous acceptons les paiements par chèque, virement bancaire et
+              espèces. Un acompte de 30% est demandé à la réservation, le solde
+              étant à régler le jour de la livraison.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span
+                >Proposez-vous des réductions pour locations multiples ?</span
+              >
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Oui ! Nous offrons des tarifs préférentiels pour les locations de
+              plusieurs articles ou pour les événements de grande envergure.
+              N'hésitez pas à nous consulter.
+            </div>
+          </div>
+        </div>
+
+        <!-- Livraison -->
+        <div class="faq-category">
+          <h2 class="faq-category-title">🚚 Livraison & Installation</h2>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Livrez-vous et installez-vous le matériel ?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Oui, nous assurons la livraison, l'installation et le démontage de
+              toutes nos structures gonflables. Pour les costumes, vous pouvez
+              venir les récupérer ou nous pouvons les livrer selon la distance.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Dans quelles zones livrez-vous ?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Nous intervenons principalement dans la Marne (51) et les
+              départements limitrophes. Pour les zones plus éloignées, des frais
+              de déplacement peuvent s'appliquer. Contactez-nous pour vérifier.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Combien de temps prenez-vous pour installer ?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              L'installation d'une structure gonflable prend généralement entre
+              15 et 30 minutes selon la taille. Nous arrivons toujours avec une
+              marge de sécurité avant le début de votre événement.
+            </div>
+          </div>
+        </div>
+
+        <!-- Sécurité -->
+        <div class="faq-category">
+          <h2 class="faq-category-title">🛡️ Sécurité & Normes</h2>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Vos structures sont-elles aux normes de sécurité ?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Absolument ! Toutes nos structures gonflables sont conformes aux
+              normes européennes EN 14960 et sont régulièrement contrôlées et
+              entretenues. Nous sommes assurés en responsabilité civile
+              professionnelle.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Que se passe-t-il en cas de mauvais temps ?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              En cas de vents forts (plus de 40 km/h) ou d'orage, nous sommes
+              contraints de dégonfler les structures pour des raisons de
+              sécurité. Nous vous proposerons un report ou un remboursement
+              selon les conditions météo.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Faut-il surveiller les enfants sur les structures ?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Oui, la présence d'un adulte responsable est obligatoire en
+              permanence pour surveiller les enfants et faire respecter les
+              règles de sécurité (pas de chaussures, nombre limité d'enfants,
+              etc.).
+            </div>
+          </div>
+        </div>
+
+        <!-- Pratique -->
+        <div class="faq-category">
+          <h2 class="faq-category-title">❓ Questions Pratiques</h2>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Avez-vous besoin d'une source d'électricité ?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Oui, nos structures gonflables nécessitent une prise électrique
+              standard 220V à proximité (environ 15-20 mètres). Nous fournissons
+              les rallonges si nécessaire.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span
+                >Quelle surface faut-il prévoir pour une structure gonflable
+                ?</span
+              >
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Cela dépend de la structure choisie. En général, prévoyez la
+              taille de la structure plus 1 à 2 mètres de dégagement tout autour
+              pour la sécurité et l'installation. Nous vous indiquerons les
+              dimensions exactes lors de la réservation.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Comment nettoyer les costumes après utilisation ?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Nous nous occupons du nettoyage ! Rendez simplement les costumes
+              dans l'état où vous les avez reçus. Des frais supplémentaires
+              peuvent s'appliquer en cas de dégradation importante.
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div
+          style="
+            text-align: center;
+            margin-top: 4rem;
+            padding: 3rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 1rem;
+            color: white;
+          "
+        >
+          <h2 style="margin-bottom: 1rem">
+            Vous n'avez pas trouvé votre réponse ?
+          </h2>
+          <p style="margin-bottom: 2rem; font-size: 1.1rem">
+            Notre équipe est là pour vous aider !
+          </p>
+          <a
+            href="contact.html"
+            class="btn btn--primary"
+            style="background: white; color: #667eea"
+            >Contactez-nous</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <p class="footer__brand">chevalier divertissements</p>
+        <p class="footer__copy">
+          Copyright © 2024 Chevalier Divertissements ·
+          <a href="mentions-legales.html" style="color: inherit; text-decoration: underline">Mentions légales</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../index.js"></script>
+    <script>
+      // FAQ Accordion
+      document.querySelectorAll(".faq-item").forEach((item) => {
+        item.addEventListener("click", () => {
+          const isActive = item.classList.contains("active");
+
+          // Close all items
+          document.querySelectorAll(".faq-item").forEach((i) => {
+            i.classList.remove("active");
+          });
+
+          // Open clicked item if it wasn't active
+          if (!isActive) {
+            item.classList.add("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

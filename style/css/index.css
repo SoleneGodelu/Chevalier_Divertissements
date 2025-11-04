@@ -132,6 +132,7 @@ img {
   width: 24px;
   height: 3px;
   background: #ffffff;
+  pointer-events: none;
 }
 @media (max-width: 900px) {
   .navbar .menu {
@@ -657,10 +658,13 @@ img {
     padding: 7rem 0 2rem;
   }
   .hero h1 {
-    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    font-size: clamp(2.4rem, 7.5vw, 3rem) !important;
+    line-height: 1.15 !important;
+    font-weight: 700 !important;
   }
   .hero__text p {
-    font-size: 0.85rem;
+    font-size: clamp(1.5rem, 4.5vw, 1.8rem) !important;
+    line-height: 1.65 !important;
   }
   .hero__image img {
     max-width: 250px;
@@ -676,10 +680,13 @@ img {
     order: 1;
   }
   .service-card__content h3 {
-    font-size: 1.2rem;
+    font-size: clamp(1.8rem, 5vw, 2.2rem) !important;
+    line-height: 1.25 !important;
+    font-weight: 600 !important;
   }
   .service-card__content p {
-    font-size: 0.85rem;
+    font-size: clamp(1.5rem, 4vw, 1.7rem) !important;
+    line-height: 1.6 !important;
   }
   /* Réalisations */
   .realisations__gallery {

@@ -5,10 +5,41 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Chevalier Divertissements : location de structures gonflables, costumes, déguisements et décorations thématiques pour vos événements. Anniversaires, mariages, fêtes d'entreprise en Champagne." />
+
+    <!-- Google Analytics -->
+    <!-- Remplacez G-XXXXXXXXXX par votre ID Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://chevalier-divertissements.fr/" />
+    <meta property="og:title" content="Chevalier Divertissements - Location structures gonflables et costumes" />
+    <meta property="og:description" content="Location de structures gonflables, costumes et décorations pour vos événements festifs en Champagne." />
+    <meta property="og:image" content="https://chevalier-divertissements.fr/images/logo.webp" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://chevalier-divertissements.fr/" />
+    <meta property="twitter:title" content="Chevalier Divertissements - Location structures gonflables et costumes" />
+    <meta property="twitter:description" content="Location de structures gonflables, costumes et décorations pour vos événements festifs en Champagne." />
+    <meta property="twitter:image" content="https://chevalier-divertissements.fr/images/logo.webp" />
 
     <title>Chevalier Divertissements</title>
 
-    <!-- Google Fonts -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg?v=2" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v=2" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.svg?v=2" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/logo.svg?v=2" />
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,8 +48,15 @@
     />
 
     <!-- Main compiled CSS (generated from /style/scss/index.scss) -->
-    <link rel="stylesheet" href="style/css/index.css" />
     <link rel="stylesheet" href="style/css/style.css" />
+    <link rel="stylesheet" href="style/css/index.css" />
+  
+    
+    <!-- GLightbox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    
+    <!-- AOS Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   </head>
   <body>
     <!-- ================= HEADER / NAVBAR =================  -->
@@ -39,6 +77,8 @@
                 >Structures gonflables & jeux</a
               >
             </li>
+            <li><a href="./pages/faq.html">FAQ</a></li>
+
           </ul>
         </nav>
 
@@ -102,23 +142,23 @@
     <!-- ================= SERVICES =================  -->
     <section class="services" id="services">
       <div class="container services__inner">
-        <h2 class="section-title">Nos services</h2>
-        <p class="services__intro">
+        <h2 class="section-title" data-aos="fade-up">Nos services</h2>
+        <p class="services__intro" data-aos="fade-up" data-aos-delay="100">
           Chez Chevalier Divertissements, nous offrons une gamme complète de
-          services pour répondre à tous vos besoins festifs :
+          services pour répondre à tous vos besoins festifs :
         </p>
 
         <div class="services__grid">
           <!-- 1 -->
-          <article class="service-card service-card--pink" id="inflatable">
+          <article class="service-card service-card--pink" id="inflatable" data-aos="fade-up" data-aos-delay="200">
             <div class="service-card__content">
               <h3 class="service-card__title">
                 Location de structures gonflables
               </h3>
               <p>
-                De l’atelier gonflable aux parcours d’obstacles, nos structures
+                De l'atelier gonflable aux parcours d'obstacles, nos structures
                 gonflables sont parfaites pour assurer la sécurité et le grand
-                plaisir des enfants (et des adultes !).
+                plaisir des enfants (et des adultes !).
               </p>
               <a href="./pages/jeux.html" class="btn btn--dark"
                 >Découvrir nos structures gonflables</a
@@ -126,16 +166,16 @@
             </div>
             <img
               src="images/Kid playing in bounce house full shot.svg"
-              alt="Structure gonflable"
+              alt="Enfant jouant dans un château gonflable coloré"
               class="img_top"
             />
           </article>
 
           <!-- 2 -->
-          <article class="service-card service-card--lilac" id="costumes">
+          <article class="service-card service-card--lilac" id="costumes" data-aos="fade-up" data-aos-delay="300">
             <img
               src="images/costume_halloween.webp"
-              alt="Costume Halloween"
+              alt="Costume d'Halloween effrayant avec cape noire"
             />
             <div class="service-card__content">
               <h3 class="service-card__title">
@@ -143,7 +183,7 @@
               </h3>
               <p>
                 Transformez‑vous en personnage de conte de fées, en super‑héros,
-                ou en créature fantastique ! Nos costumes vous permettront de
+                ou en créature fantastique ! Nos costumes vous permettront de
                 laisser libre cours à votre imagination.
               </p>
               <a href="./pages/costumes.html" class="btn btn--dark"
@@ -153,15 +193,15 @@
           </article>
 
           <!-- 3 -->
-          <article class="service-card service-card--blue" id="decor">
+          <article class="service-card service-card--blue" id="decor" data-aos="fade-up" data-aos-delay="400">
             <div class="service-card__content">
               <h3 class="service-card__title">
                 Décoration de salles avec thème
               </h3>
               <p>
-                Créez une ambiance immersive grâce à nos décorations d’intérieur
-                sur mesure. Qu’il s’agisse d’un thème tropical, médiéval ou
-                fantastique, nous avons tout ce qu’il vous faut pour que votre
+                Créez une ambiance immersive grâce à nos décorations d'intérieur
+                sur mesure. Qu'il s'agisse d'un thème tropical, médiéval ou
+                fantastique, nous avons tout ce qu'il vous faut pour que votre
                 événement soit un véritable succès.
               </p>
               <a href="./pages/realisations.html" class="btn btn--dark"
@@ -170,15 +210,15 @@
             </div>
             <img
               src="images/deco_halloween (1).webp"
-              alt="Décor"
+              alt="Décoration Halloween avec citrouilles, toiles d'araignée et bougies"
             />
           </article>
 
           <!-- 4 -->
-          <article class="service-card service-card--green" id="jeux">
+          <article class="service-card service-card--green" id="jeux" data-aos="fade-up" data-aos-delay="500">
             <img
               src="images/jeu_bois (2).webp"
-              alt="Jeu en bois"
+              alt="Jeu en bois traditionnel - jeu de lancer d'anneaux"
               class="img_bottom"
             />
             <div class="service-card__content">
@@ -208,12 +248,24 @@
         </p>
 
         <div class="realisations__gallery">
-          <img src="images/deco_halloween (1).webp" alt="Réalisation 1" />
-          <img src="images/deco_halloween (2).webp" alt="Réalisation 2" />
-          <img src="images/deco_halloween (3).webp" alt="Réalisation 3" />
-          <img src="images/deco_halloween (4).webp" alt="Réalisation 4" />
-          <img src="images/deco_mariage (2).webp" alt="Réalisation 5" />
-          <img src="images/deco_mariage (5).webp" alt="Réalisation 6" />
+          <a href="images/deco_halloween (1).webp" class="glightbox" data-gallery="realisations">
+            <img src="images/deco_halloween (1).webp" alt="Table décorée Halloween avec citrouilles et bougies" loading="lazy" />
+          </a>
+          <a href="images/deco_halloween (2).webp" class="glightbox" data-gallery="realisations">
+            <img src="images/deco_halloween (2).webp" alt="Décoration Halloween salle de réception ambiance sombre" loading="lazy" />
+          </a>
+          <a href="images/deco_halloween (3).webp" class="glightbox" data-gallery="realisations">
+            <img src="images/deco_halloween (3).webp" alt="Buffet Halloween décoré avec squelettes et fantômes" loading="lazy" />
+          </a>
+          <a href="images/deco_halloween (4).webp" class="glightbox" data-gallery="realisations">
+            <img src="images/deco_halloween (4).webp" alt="Salle festive décorée pour Halloween avec guirlandes" loading="lazy" />
+          </a>
+          <a href="images/deco_mariage (2).webp" class="glightbox" data-gallery="realisations">
+            <img src="images/deco_mariage (2).webp" alt="Décoration mariage élégante avec fleurs blanches" loading="lazy" />
+          </a>
+          <a href="images/deco_mariage (5).webp" class="glightbox" data-gallery="realisations">
+            <img src="images/deco_mariage (5).webp" alt="Table de mariage décorée avec centres de table floraux" loading="lazy" />
+          </a>
         </div>
                       <a href="./pages/realisations.html" class="btn btn--light"
                 >Découvrir toutes nos réalisations</a
@@ -317,12 +369,44 @@
       <div class="container">
         <p class="footer__brand">chevalier divertissements</p>
         <p class="footer__copy">
-          Copyright © 2024 Chevalier Divertissements · Mentions légales
+          Copyright © 2024 Chevalier Divertissements · 
+          <a href="./pages/faq.html" style="color: inherit; text-decoration: underline;">FAQ</a> · 
+          <a href="./pages/mentions-legales.html" style="color: inherit; text-decoration: underline;">Mentions légales</a>
         </p>
       </div>
     </footer>
 
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <!-- GLightbox -->
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    
+    <!-- AOS Animations -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
     <!-- Main JS -->
     <script src="index.js"></script>
+    
+    <!-- Debug script SANS event listener supplémentaire -->
+    <script>
+      // Attendre que index.js soit chargé
+      window.addEventListener('load', function() {
+        console.log('=== DEBUG FINAL index.html ===');
+        const burger = document.querySelector('.burger');
+        const menu = document.querySelector('.menu');
+        
+        console.log('Burger:', burger);
+        console.log('Menu:', menu);
+        console.log('Burger z-index:', window.getComputedStyle(burger).zIndex);
+        console.log('Burger position:', window.getComputedStyle(burger).position);
+        console.log('Burger pointer-events:', window.getComputedStyle(burger).pointerEvents);
+        console.log('Menu classes:', menu.className);
+        
+        // Afficher la position du burger
+        const rect = burger.getBoundingClientRect();
+        console.log('Burger position on screen:', rect);
+      });
+    </script>
   </body>
 </html>

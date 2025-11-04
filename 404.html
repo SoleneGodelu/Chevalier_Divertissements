@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page non trouvée - Chevalier Divertissements</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico?v=2" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chewy&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style/css/style.css" />
+    <link rel="stylesheet" href="style/css/index.css" />
+
+    <style>
+      .error-404 {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        text-align: center;
+        padding: 2rem;
+      }
+
+      .error-404__content {
+        background: white;
+        padding: 4rem 2rem;
+        border-radius: 2rem;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        max-width: 600px;
+      }
+
+      .error-404__title {
+        font-family: "Chewy", cursive;
+        font-size: clamp(4rem, 15vw, 10rem);
+        color: #667eea;
+        margin: 0;
+        line-height: 1;
+      }
+
+      .error-404__subtitle {
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
+        color: #333;
+        margin: 1rem 0;
+        font-weight: 600;
+      }
+
+      .error-404__text {
+        font-size: 1.1rem;
+        color: #666;
+        margin: 1.5rem 0 2.5rem;
+        line-height: 1.6;
+      }
+
+      .error-404__buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .error-404__icon {
+        font-size: 5rem;
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="error-404">
+      <div class="error-404__content">
+        <div class="error-404__icon">🎪</div>
+        <h1 class="error-404__title">404</h1>
+        <h2 class="error-404__subtitle">Oups ! Page introuvable</h2>
+        <p class="error-404__text">
+          Désolé, la page que vous recherchez semble avoir disparu comme par
+          magie !
+          <br />Peut-être qu'elle est partie faire la fête avec nos structures
+          gonflables ? 🎈
+        </p>
+        <div class="error-404__buttons">
+          <a href="index.html" class="btn btn--primary">Retour à l'accueil</a>
+          <a href="pages/contact.html" class="btn btn--accent"
+            >Nous contacter</a
+          >
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

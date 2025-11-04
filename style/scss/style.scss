@@ -283,3 +283,41 @@ a[href^="mailto:"] {
     max-width: 100%;
     display: inline-block;
 }
+
+/* =============================
+   Ì≥ù Form Validation Styles
+============================= */
+.form-group {
+    position: relative;
+}
+
+.form-group.error input,
+.form-group.error textarea,
+.form-group.error select {
+    border-color: #dc2626;
+    background-color: #fef2f2;
+}
+
+.form-group.success input,
+.form-group.success textarea,
+.form-group.success select {
+    border-color: #16a34a;
+    background-color: #f0fdf4;
+}
+
+.error-message {
+    color: #dc2626;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+.form-group.success::after {
+    content: "‚úì";
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #16a34a;
+    font-weight: bold;
+}

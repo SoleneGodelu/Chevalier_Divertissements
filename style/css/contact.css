@@ -380,7 +380,17 @@
     gap: 2rem;
   }
   .contact-hero__content h1 {
+    font-size: clamp(2.2rem, 6vw, 3rem) !important;
+    line-height: 1.2 !important;
     text-align: center;
+  }
+  .contact-hero__content p {
+    font-size: clamp(1.4rem, 3.5vw, 1.6rem) !important;
+    line-height: 1.65 !important;
+  }
+  .section-title {
+    font-size: clamp(2rem, 5.5vw, 3rem) !important;
+    line-height: 1.2;
   }
   .contact-info__grid {
     grid-template-columns: 1fr;
@@ -388,6 +398,9 @@
   .contact-card {
     flex-direction: column;
     text-align: center;
+  }
+  .contact-card h3 {
+    font-size: clamp(1.5rem, 3.8vw, 1.9rem) !important;
   }
   .contact-card__icon {
     margin-bottom: 1rem;
@@ -399,7 +412,8 @@
     grid-template-columns: 1fr;
   }
   .cta-contact__content h2 {
-    font-size: 2rem;
+    font-size: clamp(1.8rem, 5vw, 2.5rem) !important;
+    line-height: 1.25;
   }
   .cta-contact__buttons {
     flex-direction: column;
