@@ -222,23 +222,14 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 }); // Fin DOMContentLoaded
 
-    // Initialisation EmailJS
-  emailjs.init("service_rykjmeg");
+    emailjs.init("service_rykjmeg");
 
   const form = document.getElementById("contact-form");
-  const successMessage = document.getElementById("success-message");
 
   form.addEventListener("submit", function (e) {
-    // Netlify reçoit le formulaire normalement → pas de preventDefault
-    // EmailJS peut quand même envoyer le mail en parallèle
+    // Ne pas faire preventDefault ! sinon Netlify ne reçoit rien
+    // EmailJS peut quand même lire le formulaire
     emailjs.sendForm("service_rykjmeg", "template_o2hp5zr", this)
-      .then(() => {
-        // Affiche le message de succès
-        successMessage.style.display = "block";
-        // Vide le formulaire
-        form.reset();
-      })
-      .catch(err => {
-        console.error("Erreur EmailJS:", err);
-      });
+      .then(() => console.log("EmailJS envoyé"))
+      .catch(err => console.error("Erreur EmailJS", err));
   });
