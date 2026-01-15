@@ -223,7 +223,7 @@ document.addEventListener("DOMContentLoaded", function () {
 }); // Fin DOMContentLoaded
 
 (function () {
-  emailjs.init("PUBLIC_KEY"); // ta clé publique
+  emailjs.init("service_rykjmeg"); // ta clé publique
 })();
 
 const form = document.getElementById("contact-form");
@@ -233,8 +233,8 @@ form.addEventListener("submit", function (e) {
 
   emailjs
     .sendForm(
-      "SERVICE_ID",
-      "TEMPLATE_ID",
+      "service_rykjmeg",
+      "template_o2hp5zr",
       this
     )
     .then(
