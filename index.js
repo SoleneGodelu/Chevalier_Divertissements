@@ -221,3 +221,30 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 }); // Fin DOMContentLoaded
+
+(function () {
+  emailjs.init("PUBLIC_KEY"); // ta clé publique
+})();
+
+const form = document.getElementById("contact-form");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  emailjs
+    .sendForm(
+      "SERVICE_ID",
+      "TEMPLATE_ID",
+      this
+    )
+    .then(
+      () => {
+        alert("Merci pour votre message !");
+        form.submit(); // 🔥 laisse Netlify enregistrer le message
+      },
+      (error) => {
+        alert("Erreur lors de l'envoi");
+        console.error(error);
+      }
+    );
+});
