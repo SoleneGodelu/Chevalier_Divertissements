@@ -223,28 +223,33 @@ document.addEventListener("DOMContentLoaded", function () {
 }); // Fin DOMContentLoaded
 
 (function () {
-  emailjs.init("service_rykjmeg"); // ta clé publique
-})();
+    emailjs.init("service_rykjmeg"); // ta clé publique EmailJS
+  })();
 
-const form = document.getElementById("contact-form");
+  const form = document.getElementById("contact-form");
 
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // bloque l'envoi automatique
 
-  emailjs
-    .sendForm(
-      "service_rykjmeg",
-      "template_o2hp5zr",
-      this
-    )
-    .then(
-      () => {
+    // Envoi via EmailJS
+    emailjs.sendForm("service_rykjmeg", "template_o2hp5zr", this)
+      .then(() => {
         alert("Merci pour votre message !");
-        form.submit(); // 🔥 laisse Netlify enregistrer le message
-      },
-      (error) => {
+
+        // Soumission parallèle à Netlify
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(new FormData(form)).toString(),
+        })
+        .then(() => console.log("Netlify form submitted"))
+        .catch((err) => console.error("Erreur Netlify:", err));
+
+        // Optionnel : reset du formulaire
+        form.reset();
+      })
+      .catch((error) => {
         alert("Erreur lors de l'envoi");
         console.error(error);
-      }
-    );
-});
+      });
+  });
