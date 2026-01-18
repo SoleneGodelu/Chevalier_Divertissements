@@ -1,42 +1,76 @@
 <!-- index.html -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Chevalier Divertissements : location de structures gonflables, costumes, déguisements et décorations thématiques pour vos événements. Anniversaires, mariages, fêtes d'entreprise en Champagne." />
+    <meta
+      name="description"
+      content="Chevalier Divertissements : location de structures gonflables, costumes, déguisements et décorations thématiques pour vos événements. Anniversaires, mariages, fêtes d'entreprise en Champagne."
+    />
 
     <!-- Google Analytics -->
     <!-- Remplacez G-XXXXXXXXXX par votre ID Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXXXXX");
     </script>
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://chevalier-divertissements.fr/" />
-    <meta property="og:title" content="Chevalier Divertissements - Location structures gonflables et costumes" />
-    <meta property="og:description" content="Location de structures gonflables, costumes et décorations pour vos événements festifs en Champagne." />
-    <meta property="og:image" content="https://chevalier-divertissements.fr/images/logo.webp" />
+    <meta
+      property="og:title"
+      content="Chevalier Divertissements - Location structures gonflables et costumes"
+    />
+    <meta
+      property="og:description"
+      content="Location de structures gonflables, costumes et décorations pour vos événements festifs en Champagne."
+    />
+    <meta
+      property="og:image"
+      content="https://chevalier-divertissements.fr/images/logo.webp"
+    />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://chevalier-divertissements.fr/" />
-    <meta property="twitter:title" content="Chevalier Divertissements - Location structures gonflables et costumes" />
-    <meta property="twitter:description" content="Location de structures gonflables, costumes et décorations pour vos événements festifs en Champagne." />
-    <meta property="twitter:image" content="https://chevalier-divertissements.fr/images/logo.webp" />
+    <meta
+      property="twitter:url"
+      content="https://chevalier-divertissements.fr/"
+    />
+    <meta
+      property="twitter:title"
+      content="Chevalier Divertissements - Location structures gonflables et costumes"
+    />
+    <meta
+      property="twitter:description"
+      content="Location de structures gonflables, costumes et décorations pour vos événements festifs en Champagne."
+    />
+    <meta
+      property="twitter:image"
+      content="https://chevalier-divertissements.fr/images/logo.webp"
+    />
 
     <title>Chevalier Divertissements</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg?v=2" />
     <link rel="icon" type="image/x-icon" href="favicon.ico?v=2" />
-    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.svg?v=2" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/logo.svg?v=2"
+    />
     <link rel="apple-touch-icon" sizes="180x180" href="images/logo.svg?v=2" />
 
     <!-- Google Fonts -->
@@ -50,11 +84,13 @@
     <!-- Main compiled CSS (generated from /style/scss/index.scss) -->
     <link rel="stylesheet" href="style/css/style.css" />
     <link rel="stylesheet" href="style/css/index.css" />
-  
-    
+
     <!-- GLightbox CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-    
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
+
     <!-- AOS Animations -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   </head>
@@ -73,13 +109,12 @@
               <a href="./pages/costumes.html">Costumes & déguisements</a>
             </li>
             <li>
-              <a href="./pages/jeux.html"
-                >Structures gonflables & jeux</a
-              >
+              <a href="./pages/jeux.html">Structures gonflables & jeux</a>
             </li>
             <li><a href="./pages/faq.html">FAQ</a></li>
-            <li><a href="./pages/contact.html">Contact</a></li>
-
+            <li class="mobile-only">
+              <a href="./pages/contact.html">Contact</a>
+            </li>
           </ul>
         </nav>
 
@@ -151,7 +186,12 @@
 
         <div class="services__grid">
           <!-- 1 -->
-          <article class="service-card service-card--pink" id="inflatable" data-aos="fade-up" data-aos-delay="200">
+          <article
+            class="service-card service-card--pink"
+            id="inflatable"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <div class="service-card__content">
               <h3 class="service-card__title">
                 Location de structures gonflables
@@ -173,7 +213,12 @@
           </article>
 
           <!-- 2 -->
-          <article class="service-card service-card--lilac" id="costumes" data-aos="fade-up" data-aos-delay="300">
+          <article
+            class="service-card service-card--lilac"
+            id="costumes"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <img
               src="images/costume_halloween.webp"
               alt="Costume d'Halloween effrayant avec cape noire"
@@ -194,7 +239,12 @@
           </article>
 
           <!-- 3 -->
-          <article class="service-card service-card--blue" id="decor" data-aos="fade-up" data-aos-delay="400">
+          <article
+            class="service-card service-card--blue"
+            id="decor"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <div class="service-card__content">
               <h3 class="service-card__title">
                 Décoration de salles avec thème
@@ -216,7 +266,12 @@
           </article>
 
           <!-- 4 -->
-          <article class="service-card service-card--green" id="jeux" data-aos="fade-up" data-aos-delay="500">
+          <article
+            class="service-card service-card--green"
+            id="jeux"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
             <img
               src="images/jeu_bois (2).webp"
               alt="Jeu en bois traditionnel - jeu de lancer d'anneaux"
@@ -249,29 +304,76 @@
         </p>
 
         <div class="realisations__gallery">
-          <a href="images/deco_halloween (1).webp" class="glightbox" data-gallery="realisations">
-            <img src="images/deco_halloween (1).webp" alt="Table décorée Halloween avec citrouilles et bougies" loading="lazy" />
+          <a
+            href="images/deco_halloween (1).webp"
+            class="glightbox"
+            data-gallery="realisations"
+          >
+            <img
+              src="images/deco_halloween (1).webp"
+              alt="Table décorée Halloween avec citrouilles et bougies"
+              loading="lazy"
+            />
           </a>
-          <a href="images/deco_halloween (2).webp" class="glightbox" data-gallery="realisations">
-            <img src="images/deco_halloween (2).webp" alt="Décoration Halloween salle de réception ambiance sombre" loading="lazy" />
+          <a
+            href="images/deco_halloween (2).webp"
+            class="glightbox"
+            data-gallery="realisations"
+          >
+            <img
+              src="images/deco_halloween (2).webp"
+              alt="Décoration Halloween salle de réception ambiance sombre"
+              loading="lazy"
+            />
           </a>
-          <a href="images/deco_halloween (3).webp" class="glightbox" data-gallery="realisations">
-            <img src="images/deco_halloween (3).webp" alt="Buffet Halloween décoré avec squelettes et fantômes" loading="lazy" />
+          <a
+            href="images/deco_halloween (3).webp"
+            class="glightbox"
+            data-gallery="realisations"
+          >
+            <img
+              src="images/deco_halloween (3).webp"
+              alt="Buffet Halloween décoré avec squelettes et fantômes"
+              loading="lazy"
+            />
           </a>
-          <a href="images/deco_halloween (4).webp" class="glightbox" data-gallery="realisations">
-            <img src="images/deco_halloween (4).webp" alt="Salle festive décorée pour Halloween avec guirlandes" loading="lazy" />
+          <a
+            href="images/deco_halloween (4).webp"
+            class="glightbox"
+            data-gallery="realisations"
+          >
+            <img
+              src="images/deco_halloween (4).webp"
+              alt="Salle festive décorée pour Halloween avec guirlandes"
+              loading="lazy"
+            />
           </a>
-          <a href="images/deco_mariage (2).webp" class="glightbox" data-gallery="realisations">
-            <img src="images/deco_mariage (2).webp" alt="Décoration mariage élégante avec fleurs blanches" loading="lazy" />
+          <a
+            href="images/deco_mariage (2).webp"
+            class="glightbox"
+            data-gallery="realisations"
+          >
+            <img
+              src="images/deco_mariage (2).webp"
+              alt="Décoration mariage élégante avec fleurs blanches"
+              loading="lazy"
+            />
           </a>
-          <a href="images/deco_mariage (5).webp" class="glightbox" data-gallery="realisations">
-            <img src="images/deco_mariage (5).webp" alt="Table de mariage décorée avec centres de table floraux" loading="lazy" />
+          <a
+            href="images/deco_mariage (5).webp"
+            class="glightbox"
+            data-gallery="realisations"
+          >
+            <img
+              src="images/deco_mariage (5).webp"
+              alt="Table de mariage décorée avec centres de table floraux"
+              loading="lazy"
+            />
           </a>
         </div>
-                      <a href="./pages/realisations.html" class="btn btn--light"
-                >Découvrir toutes nos réalisations</a
-              >
-
+        <a href="./pages/realisations.html" class="btn btn--light"
+          >Découvrir toutes nos réalisations</a
+        >
       </div>
     </section>
 
@@ -285,8 +387,14 @@
         </p>
 
         <div class="devis_content">
-          <form name="contact_home" method="POST" class="devis__form" id="contact-form" data-netlify="true">
-             <input type="hidden" name="form_name" value="contact_home" />
+          <form
+            name="contact_home"
+            method="POST"
+            class="devis__form"
+            id="contact-form"
+            data-netlify="true"
+          >
+            <input type="hidden" name="form_name" value="contact_home" />
             <div class="form-group">
               <label for="name">Nom</label>
               <input
@@ -328,7 +436,9 @@
             <div class="form-group">
               <label for="subject">Sujet</label>
               <select id="subject" name="subject">
-                <option value="Structures gonflables">Structures gonflables</option>
+                <option value="Structures gonflables">
+                  Structures gonflables
+                </option>
                 <option value="Costumes">Costumes / Déguisements</option>
                 <option value="Décor">Décoration</option>
                 <option value="Autre">Autre</option>
@@ -346,71 +456,93 @@
             <button type="submit" class="btn btn--accent">
               Envoyer votre demande
             </button>
-            <div id="success-message" style="display:none; margin-top:1em; color:green;">
-    Votre message a bien été envoyé, nous vous répondrons dans les plus brefs délais.
-  </div>
+            <div
+              id="success-message"
+              style="display: none; margin-top: 1em; color: green"
+            >
+              Votre message a bien été envoyé, nous vous répondrons dans les
+              plus brefs délais.
+            </div>
           </form>
 
-                    <aside class="devis__contact">
-                        <ul>
-                            <li>
-                                <img src="./images/icon_location.svg"></img>9 Rue des Roises
-                                51210 Bergères-sous-Montmirail
-                            </li>
-                            <li>
-                                <img src="./images/icon_phone.svg"></img>07 67 80 02 30
-                            </li>
-                            <li>
-                                <img src="./images/icon_mail.svg"></img>chevalier.divertissements@gmail.com
-                            </li>
-                        </ul>
-                    </aside>
-                </div>
-            </div>
-        </section>
+          <aside class="devis__contact">
+            <ul>
+              <li>
+                <img src="./images/icon_location.svg" />9 Rue des Roises 51210
+                Bergères-sous-Montmirail
+              </li>
+              <li><img src="./images/icon_phone.svg" />07 67 80 02 30</li>
+              <li>
+                <img
+                  src="./images/icon_mail.svg"
+                />chevalier.divertissements@gmail.com
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
 
     <!-- ================= FOOTER =================  -->
     <footer class="site-footer">
       <div class="container">
         <p class="footer__brand">chevalier divertissements</p>
         <p class="footer__copy">
-          Copyright © 2024 Chevalier Divertissements · 
-          <a href="./pages/faq.html" style="color: inherit; text-decoration: underline;">FAQ</a> · 
-          <a href="./pages/mentions-legales.html" style="color: inherit; text-decoration: underline;">Mentions légales</a>
+          Copyright © 2024 Chevalier Divertissements ·
+          <a
+            href="./pages/faq.html"
+            style="color: inherit; text-decoration: underline"
+            >FAQ</a
+          >
+          ·
+          <a
+            href="./pages/mentions-legales.html"
+            style="color: inherit; text-decoration: underline"
+            >Mentions légales</a
+          >
         </p>
       </div>
     </footer>
 
     <!-- EmailJS -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+
     <!-- GLightbox -->
     <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-    
+
     <!-- AOS Animations -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
+
     <!-- Main JS -->
     <script src="index.js"></script>
-    
+
     <!-- Debug script SANS event listener supplémentaire -->
     <script>
       // Attendre que index.js soit chargé
-      window.addEventListener('load', function() {
-        console.log('=== DEBUG FINAL index.html ===');
-        const burger = document.querySelector('.burger');
-        const menu = document.querySelector('.menu');
-        
-        console.log('Burger:', burger);
-        console.log('Menu:', menu);
-        console.log('Burger z-index:', window.getComputedStyle(burger).zIndex);
-        console.log('Burger position:', window.getComputedStyle(burger).position);
-        console.log('Burger pointer-events:', window.getComputedStyle(burger).pointerEvents);
-        console.log('Menu classes:', menu.className);
-        
+      window.addEventListener("load", function () {
+        console.log("=== DEBUG FINAL index.html ===");
+        const burger = document.querySelector(".burger");
+        const menu = document.querySelector(".menu");
+
+        console.log("Burger:", burger);
+        console.log("Menu:", menu);
+        console.log("Burger z-index:", window.getComputedStyle(burger).zIndex);
+        console.log(
+          "Burger position:",
+          window.getComputedStyle(burger).position,
+        );
+        console.log(
+          "Burger pointer-events:",
+          window.getComputedStyle(burger).pointerEvents,
+        );
+        console.log("Menu classes:", menu.className);
+
         // Afficher la position du burger
         const rect = burger.getBoundingClientRect();
-        console.log('Burger position on screen:', rect);
+        console.log("Burger position on screen:", rect);
       });
     </script>
   </body>
