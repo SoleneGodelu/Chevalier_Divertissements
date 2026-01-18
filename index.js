@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Version démo sans EmailJS (à remplacer)
     alert(
-      "Merci pour votre demande ! Nous vous répondrons dans les plus brefs délais.\n\n⚠️ Mode démo : Pour activer l'envoi réel d'emails, configurez EmailJS dans index.js"
+      "Merci pour votre demande ! Nous vous répondrons dans les plus brefs délais.\n\n⚠️ Mode démo : Pour activer l'envoi réel d'emails, configurez EmailJS dans index.js",
     );
     form.reset();
   }
@@ -222,14 +222,15 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 }); // Fin DOMContentLoaded
 
-    emailjs.init("service_rykjmeg");
+emailjs.init("service_rykjmeg");
 
-  const form = document.getElementById("contact-form");
+const form = document.getElementById("contact-form");
 
-  form.addEventListener("submit", function (e) {
-    // Ne pas faire preventDefault ! sinon Netlify ne reçoit rien
-    // EmailJS peut quand même lire le formulaire
-    emailjs.sendForm("service_rykjmeg", "template_o2hp5zr", this)
-      .then(() => console.log("EmailJS envoyé"))
-      .catch(err => console.error("Erreur EmailJS", err));
-  });
+form.addEventListener("submit", function (e) {
+  // Ne pas faire preventDefault ! sinon Netlify ne reçoit rien
+  // EmailJS peut quand même lire le formulaire
+  emailjs
+    .sendForm("service_rykjmeg", "template_o2hp5zr", this)
+    .then(() => console.log("EmailJS envoyé"))
+    .catch((err) => console.error("Erreur EmailJS", err));
+});
