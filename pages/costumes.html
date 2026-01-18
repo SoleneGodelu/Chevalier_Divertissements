@@ -1,336 +1,281 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Location de costumes et déguisements pour tous vos événements : Halloween, Renaissance, super-héros. Large choix pour enfants et adultes. Chevalier Divertissements Marne 51." />
-        <title>Costumes et Déguisements - Chevalier Divertissements</title>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Location de costumes et déguisements pour tous vos événements : Halloween, Renaissance, super-héros. Large choix pour enfants et adultes. Chevalier Divertissements Marne 51."
+    />
+    <title>Costumes et Déguisements - Chevalier Divertissements</title>
+
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="../images/favicon.svg?v=2" />
     <link rel="icon" type="image/x-icon" href="../favicon.ico?v=2" />
     <link rel="icon" type="image/png" sizes="32x32" href="../images/logo.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="../images/logo.svg" />
 
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Chewy&family=Poppins:wght@300;400;500;600;700&display=swap"
-            rel="stylesheet"
-        />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chewy&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-        <link rel="stylesheet" href="../style/css/style.css" />
-        <link rel="stylesheet" href="../style/css/index.css" />
-        <link rel="stylesheet" href="../style/css/costumes.css" />
-    </head>
-    <body>
-        <!-- Navigation -->
-        <header class="navbar">
-            <div class="container">
-                <a href="../index.html" class="logo">
-                    <img loading="lazy"
-                        src="../images/logo.svg"
-                        alt="Logo Chevalier Divertissements"
-                    />
-                </a>
+    <link rel="stylesheet" href="../style/scss/style.css" />
+    <link rel="stylesheet" href="../style/scss/index.css" />
+    <link rel="stylesheet" href="../style/scss/costumes.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header class="navbar">
+      <div class="container">
+        <a href="../index.html" class="logo">
+          <img
+            loading="lazy"
+            src="../images/logo.svg"
+            alt="Logo Chevalier Divertissements"
+          />
+        </a>
 
-                <nav class="menu">
-                    <ul>
-                        <li>
-                            <a href="../pages/realisations.html"
-                                >Nos réalisations</a
-                            >
-                        </li>
-                        <li>
-                            <a href="../pages/costumes.html"
-                                >Costumes & déguisements</a
-                            >
-                        </li>
-                        <li>
-                            <a href="../pages/jeux.html"
-                                >Structures gonflables & jeux</a
-                            >
-                        </li>
-                        <li>
-                            <a href="../pages/faq.html">FAQ</a>
-                        </li>
-                        <li><a href="../pages/contact.html">Contact</a></li>
+        <nav class="menu">
+          <ul>
+            <li>
+              <a href="../pages/realisations.html">Nos réalisations</a>
+            </li>
+            <li>
+              <a href="../pages/costumes.html">Costumes & déguisements</a>
+            </li>
+            <li>
+              <a href="../pages/jeux.html">Structures gonflables & jeux</a>
+            </li>
+            <li>
+              <a href="../pages/faq.html">FAQ</a>
+            </li>
+            <li><a href="../pages/contact.html">Contact</a></li>
+          </ul>
+        </nav>
 
-                    </ul>
-                </nav>
+        <a href="contact.html" class="btn btn--accent cta-nav"
+          >Nous contacter</a
+        >
+        <button class="burger" aria-label="Ouvrir le menu mobile">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
 
-                <a href="contact.html" class="btn btn--accent cta-nav"
-                    >Nous contacter</a
-                >
-                <button class="burger" aria-label="Ouvrir le menu mobile">
-                    <span></span><span></span><span></span>
-                </button>
+    <!-- Hero Section -->
+
+    <section class="hero-costumes">
+      <div class="container hero-costumes__inner">
+        <div class="hero-costumes__content">
+          <h1 class="section-title">Costumes et Déguisements</h1>
+          <p class="hero-costumes__subtitle">
+            Transformez-vous en personnage de conte de fées, en super-héros, ou
+            en créature fantastique ! Notre collection de costumes vous permet
+            de laisser libre cours à votre imagination pour tous vos événements
+            festifs.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="main-gallery">
+      <div class="container">
+        <h2 class="section-title">Nos costumes</h2>
+        <p class="gallery-intro">
+          Découvrez notre large gamme de costumes et déguisements pour tous les
+          âges et toutes les occasions ! On ne peut pas référencer tous nos
+          costumes sur notre site donc n'hésitez pas à nous contacter pour des
+          demandes particulières !
+        </p>
+
+        <div class="gallery-filter">
+          <button class="filter-btn active" data-filter="all">Tout voir</button>
+          <button class="filter-btn" data-filter="halloween">Halloween</button>
+          <button class="filter-btn" data-filter="renaissance">
+            Époque Renaissance
+          </button>
+          <button class="filter-btn" data-filter="super-heros">
+            Super-Héros
+          </button>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+          <div class="gallery-item" data-category="halloween">
+            <img
+              loading="lazy"
+              src="../images/costume_halloween.webp"
+              alt="Costumes"
+            />
+          </div>
+
+          <div class="gallery-item" data-category="renaissance">
+            <img src="../images/costume_renaissance (1).webp" alt="Costumes" />
+          </div>
+          <div class="gallery-item" data-category="renaissance">
+            <img src="../images/costume_renaissance (3).webp" alt="Costumes" />
+          </div>
+          <div class="gallery-item" data-category="renaissance">
+            <img src="../images/costume_renaissance (4).webp" alt="Costumes" />
+          </div>
+          <div class="gallery-item" data-category="renaissance">
+            <img src="../images/costume_renaissance (5).webp" alt="Costumes" />
+          </div>
+          <div class="gallery-item" data-category="renaissance">
+            <img src="../images/costume_renaissance (8).webp" alt="Costumes" />
+          </div>
+          <div class="gallery-item" data-category="renaissance">
+            <img src="../images/costume_renaissance (10).webp" alt="Costumes" />
+          </div>
+          <div class="gallery-item" data-category="renaissance">
+            <img src="../images/costume_renaissance (11).webp" alt="Costumes" />
+          </div>
+          <div class="gallery-item" data-category="renaissance">
+            <img src="../images/costume_renaissance (12).webp" alt="Costumes" />
+          </div>
+          <div class="gallery-item" data-category="renaissance">
+            <img src="../images/costume_renaissance (13).webp" alt="Costumes" />
+          </div>
+          <div class="gallery-item" data-category="renaissance">
+            <img src="../images/costume_renaissance (14).webp" alt="Costumes" />
+          </div>
+          <div class="gallery-item" data-category="renaissance">
+            <img src="../images/costume_renaissance (16).webp" alt="Costumes" />
+          </div>
+          <div class="gallery-item" data-category="renaissance">
+            <img src="../images/costume_renaissance (17).webp" alt="Costumes" />
+          </div>
+          <div class="gallery-item" data-category="renaissance">
+            <img src="../images/costume_renaissance (18).webp" alt="Costumes" />
+          </div>
+          <div class="gallery-item" data-category="renaissance">
+            <img src="../images/costume_renaissance (19).webp" alt="Costumes" />
+          </div>
+          <div class="gallery-item" data-category="renaissance">
+            <img src="../images/costume_renaissance (20).webp" alt="Costumes" />
+          </div>
+          <div class="gallery-item" data-category="renaissance">
+            <img src="../images/costume_renaissance (22).webp" alt="Costumes" />
+          </div>
+          <div class="gallery-item" data-category="renaissance">
+            <img src="../images/costume_renaissance (23).webp" alt="Costumes" />
+          </div>
+          <div class="gallery-item" data-category="renaissance">
+            <img src="../images/costume_renaissance (24).webp" alt="Costumes" />
+          </div>
+          <div class="gallery-item" data-category="renaissance">
+            <img src="../images/costume_renaissance (25).webp" alt="Costumes" />
+          </div>
+          <div class="gallery-item" data-category="renaissance">
+            <img src="../images/costume_renaissance (26).webp" alt="Costumes" />
+          </div>
+          <div class="gallery-item" data-category="halloween">
+            <img src="../images/costume_halloween (2).webp" alt="Costumes" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+      <div class="container">
+        <div class="pricing__content">
+          <h2 class="section-title">Tarifs de Location</h2>
+          <p>
+            Des prix attractifs pour tous vos événements. Contactez-nous pour
+            des forfaits sur mesure.
+          </p>
+
+          <div class="pricing__grid">
+            <div class="pricing-card">
+              <h3 class="pricing-card__title">Costume Enfant</h3>
+              <div class="pricing-card__price">15€</div>
+              <div class="pricing-card__period">par jour</div>
+              <ul class="pricing-card__features">
+                <li>Tailles 2 à 12 ans</li>
+                <li>Nettoyage inclus</li>
+                <li>Accessoires de base</li>
+              </ul>
+              <a href="contact.html" class="btn btn--accent">Nous contacter</a>
             </div>
-        </header>
 
-        <!-- Hero Section -->
-
-        <section class="hero-costumes">
-            <div class="container hero-costumes__inner">
-                <div class="hero-costumes__content">
-                    <h1 class="section-title">Costumes et Déguisements</h1>
-                    <p class="hero-costumes__subtitle">
-                        Transformez-vous en personnage de conte de fées, en
-                        super-héros, ou en créature fantastique ! Notre
-                        collection de costumes vous permet de laisser libre
-                        cours à votre imagination pour tous vos événements
-                        festifs.
-                    </p>
-                </div>
+            <div class="pricing-card">
+              <h3 class="pricing-card__title">Costume Adulte</h3>
+              <div class="pricing-card__price">25€</div>
+              <div class="pricing-card__period">par jour</div>
+              <ul class="pricing-card__features">
+                <li>Toutes tailles</li>
+                <li>Nettoyage inclus</li>
+                <li>Accessoires complets</li>
+              </ul>
+              <a href="contact.html" class="btn btn--accent">Nous contacter</a>
             </div>
-        </section>
 
-        <!-- Categories Section -->
-        <section class="main-gallery">
-            <div class="container">
-                <h2 class="section-title">Nos costumes</h2>
-                <p class="gallery-intro">
-                    Découvrez notre large gamme de costumes et déguisements pour tous les âges et toutes les occasions ! On ne peut pas référencer tous nos costumes sur notre site donc n'hésitez pas à nous contacter pour des demandes particulières ! 
-                </p>
-
-                <div class="gallery-filter">
-                    <button class="filter-btn active" data-filter="all">
-                        Tout voir
-                    </button>
-                    <button class="filter-btn" data-filter="halloween">
-                        Halloween
-                    </button>
-                    <button class="filter-btn" data-filter="renaissance">
-                        Époque Renaissance
-                    </button>
-                    <button class="filter-btn" data-filter="super-heros">
-                        Super-Héros
-                    </button>
-                </div>
-
-                <div class="gallery-grid" id="galleryGrid">
-                    <div class="gallery-item" data-category="halloween">
-                        <img loading="lazy"
-                            src="../images/costume_halloween.webp"
-                            alt="Costumes"
-                        />
-                    </div>
-
-                    <div class="gallery-item" data-category="renaissance">
-                        <img 
-                            src="../images/costume_renaissance (1).webp"
-                            alt="Costumes"
-                        />
-                    </div><div class="gallery-item" data-category="renaissance">
-                        <img 
-                            src="../images/costume_renaissance (3).webp"
-                            alt="Costumes"
-                        />
-                    </div><div class="gallery-item" data-category="renaissance">
-                        <img 
-                            src="../images/costume_renaissance (4).webp"
-                            alt="Costumes"
-                        />
-                    </div><div class="gallery-item" data-category="renaissance">
-                        <img 
-                            src="../images/costume_renaissance (5).webp"
-                            alt="Costumes"
-                        />
-                    </div><div class="gallery-item" data-category="renaissance">
-                        <img 
-                            src="../images/costume_renaissance (8).webp"
-                            alt="Costumes"
-                        />
-                    </div><div class="gallery-item" data-category="renaissance">
-                        <img 
-                            src="../images/costume_renaissance (10).webp"
-                            alt="Costumes"
-                        />
-                    </div><div class="gallery-item" data-category="renaissance">
-                        <img 
-                            src="../images/costume_renaissance (11).webp"
-                            alt="Costumes"
-                        />
-                    </div><div class="gallery-item" data-category="renaissance">
-                        <img 
-                            src="../images/costume_renaissance (12).webp"
-                            alt="Costumes"
-                        />
-                    </div><div class="gallery-item" data-category="renaissance">
-                        <img 
-                            src="../images/costume_renaissance (13).webp"
-                            alt="Costumes"
-                        />
-                    </div>
-                    <div class="gallery-item" data-category="renaissance">
-                        <img 
-                            src="../images/costume_renaissance (14).webp"
-                            alt="Costumes"
-                        />
-                    </div>
-                    <div class="gallery-item" data-category="renaissance">
-                        <img 
-                            src="../images/costume_renaissance (16).webp"
-                            alt="Costumes"
-                        />
-                    </div><div class="gallery-item" data-category="renaissance">
-                        <img 
-                            src="../images/costume_renaissance (17).webp"
-                            alt="Costumes"
-                        />
-                    </div><div class="gallery-item" data-category="renaissance">
-                        <img 
-                            src="../images/costume_renaissance (18).webp"
-                            alt="Costumes"
-                        />
-                    </div><div class="gallery-item" data-category="renaissance">
-                        <img 
-                            src="../images/costume_renaissance (19).webp"
-                            alt="Costumes"
-                        />
-                    </div>
-                    <div class="gallery-item" data-category="renaissance">
-                        <img 
-                            src="../images/costume_renaissance (20).webp"
-                            alt="Costumes"
-                        />
-                    </div>
-                    <div class="gallery-item" data-category="renaissance">
-                        <img 
-                            src="../images/costume_renaissance (22).webp"
-                            alt="Costumes"
-                        />
-                    </div>
-                    <div class="gallery-item" data-category="renaissance">
-                        <img 
-                            src="../images/costume_renaissance (23).webp"
-                            alt="Costumes"
-                        />
-                    </div>
-                    <div class="gallery-item" data-category="renaissance">
-                        <img 
-                            src="../images/costume_renaissance (24).webp"
-                            alt="Costumes"
-                        />
-                    </div>
-                    <div class="gallery-item" data-category="renaissance">
-                        <img 
-                            src="../images/costume_renaissance (25).webp"
-                            alt="Costumes"
-                        />
-                    </div>
-                    <div class="gallery-item" data-category="renaissance">
-                        <img 
-                            src="../images/costume_renaissance (26).webp"
-                            alt="Costumes"
-                        />
-                    </div><div class="gallery-item" data-category="halloween">
-                        <img 
-                            src="../images/costume_halloween (2).webp"
-                            alt="Costumes"
-                        />
-                    </div>
-                    </div>
-                </div>
+            <div class="pricing-card">
+              <h3 class="pricing-card__title">Forfait Groupe</h3>
+              <div class="pricing-card__price">Sur devis</div>
+              <div class="pricing-card__period">à partir de 5 costumes</div>
+              <ul class="pricing-card__features">
+                <li>Remise dégressive</li>
+                <li>Livraison possible</li>
+                <li>Conseil personnalisé</li>
+              </ul>
+              <a href="contact.html" class="btn btn--accent"
+                >Demander un devis</a
+              >
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!-- Pricing Section -->
-        <section class="pricing">
-            <div class="container">
-                <div class="pricing__content">
-                    <h2 class="section-title">Tarifs de Location</h2>
-                    <p>
-                        Des prix attractifs pour tous vos événements.
-                        Contactez-nous pour des forfaits sur mesure.
-                    </p>
+    <!-- Contact CTA -->
+    <section class="contact-cta" id="contact">
+      <div class="container">
+        <h2 class="section-title">Prêt à vous déguiser ?</h2>
+        <p>
+          Contactez-nous dès aujourd'hui pour réserver vos costumes et créer des
+          souvenirs inoubliables !
+        </p>
+        <a href="contact.html" class="btn btn--accent"
+          >Demander un devis gratuit</a
+        >
+      </div>
+    </section>
 
-                    <div class="pricing__grid">
-                        <div class="pricing-card">
-                            <h3 class="pricing-card__title">Costume Enfant</h3>
-                            <div class="pricing-card__price">15€</div>
-                            <div class="pricing-card__period">par jour</div>
-                            <ul class="pricing-card__features">
-                                <li>Tailles 2 à 12 ans</li>
-                                <li>Nettoyage inclus</li>
-                                <li>Accessoires de base</li>
-                            </ul>
-                            <a href="contact.html" class="btn btn--accent"
-                                >Nous contacter</a
-                            >
-                        </div>
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <p class="footer__brand">chevalier divertissements</p>
+        <p class="footer__copy">
+          Copyright © 2024 Chevalier Divertissements ·
+          <a href="faq.html" style="color: inherit; text-decoration: underline"
+            >FAQ</a
+          >
+          ·
+          <a
+            href="mentions-legales.html"
+            style="color: inherit; text-decoration: underline"
+            >Mentions légales</a
+          >
+        </p>
+      </div>
+    </footer>
 
-                        <div class="pricing-card">
-                            <h3 class="pricing-card__title">Costume Adulte</h3>
-                            <div class="pricing-card__price">25€</div>
-                            <div class="pricing-card__period">par jour</div>
-                            <ul class="pricing-card__features">
-                                <li>Toutes tailles</li>
-                                <li>Nettoyage inclus</li>
-                                <li>Accessoires complets</li>
-                            </ul>
-                            <a href="contact.html" class="btn btn--accent"
-                                >Nous contacter</a
-                            >
-                        </div>
-
-                        <div class="pricing-card">
-                            <h3 class="pricing-card__title">Forfait Groupe</h3>
-                            <div class="pricing-card__price">Sur devis</div>
-                            <div class="pricing-card__period">
-                                à partir de 5 costumes
-                            </div>
-                            <ul class="pricing-card__features">
-                                <li>Remise dégressive</li>
-                                <li>Livraison possible</li>
-                                <li>Conseil personnalisé</li>
-                            </ul>
-                            <a href="contact.html" class="btn btn--accent"
-                                >Demander un devis</a
-                            >
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact CTA -->
-        <section class="contact-cta" id="contact">
-            <div class="container">
-                <h2 class="section-title">Prêt à vous déguiser ?</h2>
-                <p>
-                    Contactez-nous dès aujourd'hui pour réserver vos costumes et
-                    créer des souvenirs inoubliables !
-                </p>
-                <a href="contact.html" class="btn btn--accent"
-                    >Demander un devis gratuit</a
-                >
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="site-footer">
-            <div class="container">
-                <p class="footer__brand">chevalier divertissements</p>
-                <p class="footer__copy">
-                    Copyright © 2024 Chevalier Divertissements · 
-                    <a href="faq.html" style="color: inherit; text-decoration: underline;">FAQ</a> · 
-                    <a href="mentions-legales.html" style="color: inherit; text-decoration: underline;">Mentions légales</a>
-                </p>
-            </div>
-        </footer>
-
-         <!-- JavaScript -->
+    <!-- JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-        <script src="../index.js"></script>
-        
+    <script src="../index.js"></script>
+
     <!-- Debug script -->
     <script>
-      console.log('🔍 DEBUG costumes.html');
-      console.log('Burger element:', document.querySelector('.burger'));
-      console.log('Menu element:', document.querySelector('.menu'));
+      console.log("🔍 DEBUG costumes.html");
+      console.log("Burger element:", document.querySelector(".burger"));
+      console.log("Menu element:", document.querySelector(".menu"));
     </script>
-    </body>
+  </body>
 </html>
