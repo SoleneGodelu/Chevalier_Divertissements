@@ -1,0 +1,750 @@
+@charset "UTF-8";
+/* style/scss/index.scss */
+/* ================= VARIABLES ================= */
+@font-face {
+  font-family: SunnySpells;
+  src: url(/font/Sunny\ Spells.ttf) format("truetype");
+}
+/* ================= GLOBAL STYLES ================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: #21221e;
+  background-color: #ffffff;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(90%, 1100px);
+  margin-inline: auto;
+}
+
+.section-title {
+  font-family: SunnySpells;
+  font-weight: 100;
+  font-size: clamp(1.8rem, 6vw, 4rem);
+  text-align: center;
+  margin: 0 0 1.5rem;
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+.btn--primary {
+  background: #005c83;
+  color: #ffffff;
+}
+.btn--primary:hover {
+  background: rgb(0, 63.3465648855, 90.2);
+}
+.btn--accent {
+  background: #f5c400;
+  color: #21221e;
+}
+.btn--accent:hover {
+  background: rgb(204.2, 163.36, 0);
+}
+.btn--dark {
+  background: #21221e;
+  color: #ffffff;
+}
+.btn--dark:hover {
+  background: rgb(72.4453125, 74.640625, 65.859375);
+}
+.btn--light {
+  background: #f5f5f5;
+  color: #2d8cc7;
+}
+.btn--light:hover {
+  background: rgb(30.8913934426, 96.106557377, 136.6086065574);
+  color: #ffffff;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  inset-inline: 0;
+  background: #005c83;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 92, 131, 0.25);
+  /* ===== Burger (mobile) ===== */
+}
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 0.75rem;
+}
+.navbar .logo img {
+  height: 48px;
+  width: auto;
+}
+.navbar .menu .mobile-only {
+  display: none;
+}
+.navbar .menu ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+.navbar .menu ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.25s ease;
+}
+.navbar .menu ul li a:hover, .navbar .menu ul li a:focus {
+  opacity: 0.75;
+}
+.navbar .cta-nav {
+  margin-left: 0;
+}
+.navbar .burger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.navbar .burger span {
+  width: 24px;
+  height: 3px;
+  background: #ffffff;
+}
+@media (max-width: 900px) {
+  .navbar .menu {
+    position: fixed;
+    inset: 0 0 0 auto;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    background: #005c83;
+    padding: min(20vh, 6rem) 2rem;
+  }
+  .navbar .menu .mobile-only {
+    display: inline-block;
+  }
+  .navbar .menu ul {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .navbar .menu ul li a {
+    font-size: 1.25rem;
+  }
+  .navbar .menu.open {
+    transform: translateX(0);
+  }
+  .navbar .burger {
+    display: flex;
+  }
+  .navbar .cta-nav {
+    display: none;
+  }
+}
+
+/* ================= HERO ================= */
+.hero {
+  padding: 15rem 0;
+}
+.hero h1 {
+  text-align: left;
+  color: #005c83;
+  font-size: clamp(1.8rem, 6vw, 5rem);
+  line-height: 5rem;
+}
+.hero__inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: center;
+  gap: 4rem;
+}
+.hero__logo {
+  max-width: 340px;
+  margin-bottom: 1rem;
+}
+.hero__text p {
+  margin: 3rem 0;
+}
+.hero__image img {
+  border-radius: 1rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* ================= TESTIMONIAL ================= */
+.testimonial {
+  background: rgba(0, 92, 131, 0.15);
+  padding-block: 4rem;
+}
+.testimonial__card {
+  max-width: 800px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+@media (min-width: 600px) {
+  .testimonial__card {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+.testimonial__avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: 0 0 0 4px #f5c400;
+}
+.testimonial__name {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+.testimonial__rating {
+  font-size: 1.1rem;
+  color: #f5c400;
+}
+.testimonial__text {
+  margin-top: 0.5rem;
+}
+
+/* ================= SERVICES ================= */
+.services {
+  padding-block: 4rem;
+}
+.services__intro {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-inline: auto;
+}
+.services__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.service-card {
+  display: flex;
+  height: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+.service-card img {
+  flex: 1;
+  width: 50%;
+  height: 550px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.service-card .img_top {
+  border-top-right-radius: 0.5rem;
+}
+.service-card .img_bottom {
+  border-bottom-left-radius: 0.5rem;
+}
+.service-card__content {
+  width: 50%;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  gap: 2rem;
+}
+.service-card__content h3 {
+  text-align: center;
+  margin: 0;
+  font-size: clamp(1.8rem, 6vw, 2rem);
+}
+.service-card__content p {
+  text-align: center;
+  flex-grow: 1;
+}
+.service-card--pink {
+  background: #ffd9e3;
+}
+.service-card--lilac {
+  background: #e9d9ff;
+}
+.service-card--blue {
+  background: #d4f1ff;
+}
+.service-card--green {
+  background: #d4ffe1;
+}
+
+/* ================= REALISATIONS ================= */
+.realisations {
+  background: #7eb1d1;
+  padding-block: 4rem;
+  color: #ffffff;
+}
+.realisations p {
+  max-width: 800px;
+  margin-inline: auto;
+  text-align: center;
+  color: shade(#ffffff, 30%);
+}
+.realisations__gallery {
+  margin-top: 3rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+.realisations__gallery img {
+  border-radius: 0.5rem;
+  aspect-ratio: 4/3;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 20rem;
+  transition: transform 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.realisations a {
+  margin: 3rem auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 30rem;
+}
+
+/* ================= DEVIS ================= */
+.devis {
+  padding-block: 4rem;
+}
+.devis__inner {
+  gap: 3rem;
+}
+.devis__intro {
+  grid-column: 1/-1;
+  text-align: center;
+  max-width: 800px;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+}
+.devis .devis_content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.devis__form {
+  display: grid;
+  gap: 1rem;
+  width: 50rem;
+}
+.devis__form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+.devis__form .form-group label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.devis__form .form-group input,
+.devis__form .form-group textarea,
+.devis__form .form-group select {
+  padding: 0.75rem 1rem;
+  border: 1px solid rgb(211.890625, 213.28125, 207.71875);
+  border-radius: 4px;
+  font-family: inherit;
+}
+.devis__form .form-group textarea {
+  resize: vertical;
+}
+.devis__form .form-group--full {
+  grid-column: 1/-1;
+}
+.devis__form .btn {
+  border: none;
+  font-family: "Poppins", sans-serif;
+}
+.devis__contact ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+}
+.devis__contact ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.devis__contact ul li img {
+  width: 1.8rem;
+}
+
+/* ================= FOOTER ================= */
+.site-footer {
+  background: #005c83;
+  color: #ffffff;
+  text-align: center;
+  padding-block: 2rem;
+}
+.site-footer .footer__brand {
+  font-family: SunnySpells;
+  font-size: 2.5rem;
+  margin: 0 0 0.25rem;
+  letter-spacing: 1px;
+}
+.site-footer .footer__copy {
+  font-size: 0.875rem;
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* =============================
+   📱 MEDIA QUERIES RESPONSIVE
+   À ajouter à la fin de index.scss
+============================= */
+/* ================= TABLETTE (≤ 992px) ================= */
+@media (max-width: 992px) {
+  /* Navbar - Fix burger à droite */
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar .burger {
+    display: flex;
+    order: 3;
+    margin-left: auto;
+    z-index: 1001;
+    position: relative;
+  }
+  .navbar .cta-nav {
+    display: none;
+  }
+  .navbar .menu {
+    position: fixed;
+    inset: 0;
+    background: #005c83;
+    padding: min(20vh, 6rem) 2rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar .menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar .menu ul li {
+    text-align: center;
+  }
+  .navbar .menu ul li .mobile-only {
+    display: block;
+  }
+  .navbar .menu ul li a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    display: block;
+    padding: 0.5rem;
+  }
+  .navbar .menu ul li a:hover {
+    opacity: 0.75;
+  }
+  .navbar .menu.open {
+    transform: translateX(0);
+  }
+  /* Hero */
+  .hero {
+    padding: 10rem 0 4rem;
+  }
+  .hero__inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .hero__text {
+    text-align: center;
+  }
+  .hero__text p {
+    margin: 2rem 0;
+  }
+  .hero__image {
+    order: -1;
+  }
+  .hero__image img {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .hero h1 {
+    text-align: center;
+    line-height: 1.2;
+  }
+  /* Services - Cards restent en colonne mais s'adaptent */
+  .service-card {
+    flex-direction: column !important;
+  }
+  .service-card img {
+    width: 100% !important;
+    height: 400px;
+    border-radius: 0.5rem 0.5rem 0 0 !important;
+  }
+  .service-card .img_top,
+  .service-card .img_bottom {
+    border-radius: 0.5rem 0.5rem 0 0 !important;
+  }
+  .service-card__content {
+    width: 100% !important;
+    padding: 2rem;
+  }
+  /* Devis - Formulaire en colonne */
+  .devis_content {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .devis__form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .devis__contact {
+    text-align: center;
+  }
+  .devis__contact ul {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+/* ================= MOBILE (≤ 768px) ================= */
+@media (max-width: 768px) {
+  /* Container plus large sur mobile */
+  .container {
+    width: 95%;
+  }
+  /* Section titles plus petits */
+  .section-title {
+    font-size: clamp(2rem, 6vw, 3rem);
+    margin-bottom: 1rem;
+  }
+  /* Hero */
+  .hero {
+    padding: 8rem 0 3rem;
+  }
+  .hero h1 {
+    font-size: clamp(2rem, 7vw, 3.5rem);
+    line-height: 1.3;
+  }
+  .hero__text p {
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+  }
+  .hero__image img {
+    max-width: 300px;
+  }
+  /* Buttons responsive */
+  .btn {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.9rem;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+  .hero__text .btn {
+    margin: 0 auto;
+  }
+  /* Services */
+  .services {
+    padding-block: 3rem;
+  }
+  .services__intro {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+  .service-card img {
+    height: 150px;
+    order: 2;
+  }
+  .service-card__content {
+    padding: 1.5rem;
+    gap: 1.5rem;
+    order: 1;
+  }
+  .service-card__content h3 {
+    font-size: clamp(1.3rem, 4vw, 1.8rem);
+  }
+  .service-card__content p {
+    font-size: 0.9rem;
+  }
+  /* Réalisations */
+  .realisations {
+    padding-block: 3rem;
+  }
+  .realisations p {
+    font-size: 0.95rem;
+  }
+  .realisations__gallery {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 0.75rem;
+  }
+  .realisations__gallery img {
+    height: auto;
+    aspect-ratio: 4/3;
+  }
+  .realisations a {
+    width: 100%;
+    max-width: 300px;
+  }
+  /* Devis */
+  .devis {
+    padding-block: 3rem;
+  }
+  .devis__intro {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+  .devis__form {
+    gap: 0.75rem;
+  }
+  .devis__form .form-group label {
+    font-size: 0.9rem;
+  }
+  .devis__form .form-group input,
+  .devis__form .form-group textarea,
+  .devis__form .form-group select {
+    padding: 0.65rem 0.85rem;
+    font-size: 0.9rem;
+  }
+  .devis__contact ul li {
+    font-size: 0.9rem;
+  }
+  .devis__contact ul li img {
+    width: 1.5rem;
+  }
+  /* Footer */
+  .site-footer {
+    padding-block: 1.5rem;
+  }
+  .site-footer .footer__brand {
+    font-size: 2rem;
+  }
+  .site-footer .footer__copy {
+    font-size: 0.8rem;
+  }
+}
+/* ================= PETIT MOBILE (≤ 480px) ================= */
+@media (max-width: 480px) {
+  /* Hero encore plus compact */
+  .hero {
+    padding: 7rem 0 2rem;
+  }
+  .hero h1 {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+  }
+  .hero__text p {
+    font-size: 0.85rem;
+  }
+  .hero__image img {
+    max-width: 250px;
+  }
+  /* Services cards très compactes */
+  .service-card img {
+    height: 130px;
+    order: 2;
+  }
+  .service-card__content {
+    padding: 1.25rem;
+    gap: 1rem;
+    order: 1;
+  }
+  .service-card__content h3 {
+    font-size: 1.2rem;
+  }
+  .service-card__content p {
+    font-size: 0.85rem;
+  }
+  /* Réalisations */
+  .realisations__gallery {
+    grid-template-columns: 1fr;
+  }
+  .realisations__gallery img {
+    height: auto;
+    aspect-ratio: 4/3;
+  }
+  /* Devis formulaire 1 colonne */
+  .devis__form .form-group input,
+  .devis__form .form-group textarea,
+  .devis__form .form-group select {
+    font-size: 0.85rem;
+  }
+}
+/* ================= GRAND ÉCRAN (≥ 1200px) ================= */
+@media (min-width: 1200px) {
+  .container {
+    width: min(85%, 1200px);
+  }
+  /* Hero plus d'espace */
+  .hero {
+    padding: 18rem 0;
+  }
+  .hero__inner {
+    gap: 5rem;
+  }
+  /* Services cards plus grandes */
+  .service-card img {
+    height: 600px;
+  }
+  .service-card__content {
+    padding: 4rem;
+  }
+  /* Réalisations gallery optimisée */
+  .realisations__gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .realisations__gallery img {
+    height: 22rem;
+  }
+}
+/* ================= TRÈS GRAND ÉCRAN (≥ 1600px) ================= */
+@media (min-width: 1600px) {
+  .container {
+    width: min(80%, 1400px);
+  }
+  .hero {
+    padding: 20rem 0;
+  }
+  .service-card img {
+    height: 650px;
+  }
+  .realisations__gallery img {
+    height: 25rem;
+  }
+}/*# sourceMappingURL=index.css.map */

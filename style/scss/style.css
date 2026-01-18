@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Réinitialisation de base  */
 * {
   box-sizing: border-box;
@@ -5,41 +6,32 @@
   padding: 0;
 }
 
-// / body {
-//     font-size: 1.1rem;
-// }
-
 /* Valeur par défaut pour les écrans « moyens » (tablettes en mode portrait) */
 html {
   font-size: 62.5%;
 } /* 1 rem = 10 px */
-
 /* Petits smartphones : on réduit légèrement */
 @media (max-width: 480px) {
   html {
     font-size: 56.25%;
   } /* 1 rem = 9 px  */
 }
-
 /* Grands laptops et desktops : on agrandit */
 @media (min-width: 1200px) {
   html {
     font-size: 68.75%;
   } /* 1 rem = 11 px */
 }
-
 /* Ultra-wide (≥ 1600 px) : encore un cran */
 @media (min-width: 1600px) {
   html {
     font-size: 75%;
   } /* 1 rem = 12 px */
 }
-
 /* =============================
    🌐 Responsive global — à coller en bas de style.scss
    (ne modifie ni couleurs ni contenus)
 ============================= */
-
 /* ---- Conteneurs & images ---- */
 .container,
 .coontainer {
@@ -47,6 +39,7 @@ html {
   width: min(92%, 1200px);
   margin-inline: auto;
 }
+
 img {
   max-width: 100%;
   height: auto;
@@ -62,11 +55,9 @@ img {
     gap: 0.5rem;
     padding-block: 0.75rem;
   }
-
   .navbar .burger {
     display: inline-flex;
   }
-
   .navbar .menu {
     position: fixed;
     inset: 64px 0 auto 0; /* panneau sous la barre */
@@ -76,10 +67,7 @@ img {
     transform: translateY(-10px);
     opacity: 0;
     visibility: hidden;
-    transition:
-      opacity 0.2s ease,
-      transform 0.2s ease,
-      visibility 0.2s;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
   }
   .navbar .menu ul {
     display: flex;
@@ -97,7 +85,6 @@ img {
     display: none;
   }
 }
-
 /* ---- Hero générique (toutes variantes) ---- */
 @media (max-width: 992px) {
   .hero__inner,
@@ -123,7 +110,6 @@ img {
     width: 85%;
   }
 }
-
 /* ---- Barres de filtres (galeries) ---- */
 @media (max-width: 768px) {
   .gallery-filter {
@@ -139,7 +125,6 @@ img {
     padding: 0.6rem 1rem;
   }
 }
-
 /* ---- Grilles d’images / cartes ---- */
 @media (max-width: 1200px) {
   .realisations__gallery,
@@ -160,9 +145,11 @@ img {
     gap: 1rem;
   }
   .gallery-item img {
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-    object-position: top;
+    aspect-ratio: 4/3;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: top;
+       object-position: top;
   }
   .structure-card,
   .jeu-card,
@@ -179,7 +166,6 @@ img {
     margin-bottom: 1rem;
   }
 }
-
 /* ---- Sections infos / FAQ (listes en cartes) ---- */
 @media (max-width: 992px) {
   .infos-grid,
@@ -196,7 +182,6 @@ img {
     padding: 1.25rem;
   }
 }
-
 /* ---- Formulaires (devis & contact) ---- */
 @media (max-width: 1100px) {
   .devis_content,
@@ -219,7 +204,6 @@ img {
     gap: 0.75rem;
   }
 }
-
 /* ---- Grilles de tarifs / CTA ---- */
 @media (max-width: 992px) {
   .pricing__grid {
@@ -260,7 +244,6 @@ img {
     max-width: 320px;
   }
 }
-
 /* ---- Accessibilité & lisibilité mobile ---- */
 @media (max-width: 480px) {
   body {
@@ -278,7 +261,6 @@ img {
     padding: 2rem 0;
   }
 }
-
 /* ---- Sécurité d’affichage des liens email ---- */
 a[href^="mailto:"] {
   overflow-wrap: anywhere;
@@ -323,4 +305,4 @@ a[href^="mailto:"] {
   transform: translateY(-50%);
   color: #16a34a;
   font-weight: bold;
-}
+}/*# sourceMappingURL=style.css.map */

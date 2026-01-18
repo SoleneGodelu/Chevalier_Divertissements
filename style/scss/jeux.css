@@ -1,0 +1,310 @@
+@charset "UTF-8";
+/* style/scss/structures.scss */
+/* ================= VARIABLES (héritées de index.scss) ================= */
+/* ================= HERO SECTION ================= */
+.hero-structures {
+  background: linear-gradient(135deg, rgba(0, 92, 131, 0.1) 0%, rgba(245, 196, 0, 0.1) 100%);
+  padding: 12rem 0 6rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero-structures::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><circle cx="10" cy="10" r="1" fill="%23005c83" opacity="0.1"/><circle cx="30" cy="15" r="1.5" fill="%23f5c400" opacity="0.1"/><circle cx="50" cy="5" r="1" fill="%23005c83" opacity="0.1"/><circle cx="70" cy="12" r="1.5" fill="%23f5c400" opacity="0.1"/><circle cx="90" cy="8" r="1" fill="%23005c83" opacity="0.1"/></svg>');
+}
+.hero-structures__inner {
+  display: grid;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.hero-structures__content {
+  text-align: center;
+  animation: slideUp 0.8s ease-out;
+}
+.hero-structures__content h1 {
+  color: #005c83;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: clamp(2.4rem, 5vw, 4.8rem);
+}
+.hero-structures__subtitle {
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
+  max-width: 80rem;
+  margin: 0 auto 3rem;
+  color: rgb(72.4453125, 74.640625, 65.859375);
+  line-height: 1.7;
+}
+
+/* ================= SECTIONS COMMUNES ================= */
+.structures-section,
+.jeux-section {
+  padding-block: 5rem;
+}
+.structures-section .section-intro,
+.jeux-section .section-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  font-size: 1.1rem;
+  color: rgb(85.59375, 88.1875, 77.8125);
+}
+
+.jeux-section {
+  background: #f5f5f5;
+}
+
+/* ================= STRUCTURES GONFLABLES ================= */
+.structures-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+@media (max-width: 480px) {
+  .structures-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.structure-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(33, 34, 30, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 3px solid transparent;
+}
+.structure-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(33, 34, 30, 0.15);
+}
+.structure-card img {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.structure-card__content {
+  padding: 2rem;
+}
+.structure-card__content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  color: #21221e;
+}
+.structure-card__content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  color: rgb(72.4453125, 74.640625, 65.859375);
+}
+.structure-card--pink {
+  border-color: #ffd9e3;
+}
+.structure-card--pink:hover {
+  border-color: rgb(255, 115, 151.8421052632);
+}
+.structure-card--lilac {
+  border-color: #e9d9ff;
+}
+.structure-card--lilac:hover {
+  border-color: rgb(173.9473684211, 115, 255);
+}
+.structure-card--blue {
+  border-color: #d4f1ff;
+}
+.structure-card--blue:hover {
+  border-color: rgb(110, 207.7906976744, 255);
+}
+.structure-card--green {
+  border-color: #d4ffe1;
+}
+.structure-card--green:hover {
+  border-color: rgb(110, 255, 153.8372093023);
+}
+
+.structure-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.structure-features li {
+  padding: 0.5rem 0;
+  color: rgb(59.296875, 61.09375, 53.90625);
+  font-weight: 500;
+}
+.structure-features li::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #f5c400;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+}
+
+/* ================= JEUX EN BOIS ================= */
+.jeux-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+@media (max-width: 400px) {
+  .jeux-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.jeu-card {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(33, 34, 30, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.jeu-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(33, 34, 30, 0.12);
+}
+.jeu-card img {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.jeu-card__content {
+  padding: 1.5rem;
+}
+.jeu-card__content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+  color: #21221e;
+}
+.jeu-card__content p {
+  margin: 0;
+  line-height: 1.6;
+  color: rgb(85.59375, 88.1875, 77.8125);
+}
+
+/* ================= INFORMATIONS PRATIQUES ================= */
+.infos-pratiques {
+  padding-block: 5rem;
+  background: linear-gradient(135deg, #005c83, rgb(0, 127.8167938931, 182));
+  color: #ffffff;
+}
+.infos-pratiques .section-title {
+  color: #ffffff;
+}
+
+.infos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.info-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 0.75rem;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background 0.3s ease;
+}
+.info-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+.info-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  color: #f5c400;
+}
+.info-card p {
+  margin: 0;
+  line-height: 1.7;
+  opacity: 0.95;
+}
+
+/* ================= CTA DEVIS ================= */
+.devis-cta {
+  padding-block: 5rem;
+  background: #f5f5f5;
+}
+.devis-cta__content {
+  text-align: center;
+  max-width: 600px;
+  margin-inline: auto;
+}
+.devis-cta__content p {
+  font-size: 1.1rem;
+  margin: 2rem 0 3rem;
+  color: rgb(85.59375, 88.1875, 77.8125);
+}
+.devis-cta__buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.devis-cta__buttons .btn {
+  min-width: 200px;
+  text-align: center;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .structures-hero {
+    padding: 10rem 0 4rem;
+  }
+  .structures-hero__subtitle {
+    font-size: 1rem;
+  }
+  .structures-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .structure-card__content {
+    padding: 1.5rem;
+  }
+  .infos-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .info-card {
+    padding: 1.5rem;
+  }
+  .devis-cta__buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .devis-cta__buttons .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+@media (max-width: 480px) {
+  .structures-section,
+  .jeux-section,
+  .infos-pratiques,
+  .devis-cta {
+    padding-block: 3rem;
+  }
+  .jeux-grid {
+    gap: 1.5rem;
+  }
+  .jeu-card__content {
+    padding: 1.25rem;
+  }
+}/*# sourceMappingURL=jeux.css.map */
