@@ -170,7 +170,7 @@ img {
     }
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 993px) {
     .menu {
       .mobile-only {
         display: inline-block;
@@ -481,6 +481,7 @@ img {
   color: $text-light;
   text-align: center;
   padding-block: 2rem;
+  height: auto;
 
   .footer__brand {
     font-family: $font-display;
